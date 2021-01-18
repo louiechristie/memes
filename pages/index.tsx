@@ -14,7 +14,11 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function Index(props) {
+interface Props {
+  memes: Meme[];
+}
+
+export default function Index(props: Props) {
   const { memes } = props;
 
   return (
