@@ -152,7 +152,6 @@ const memes: Meme[] = [
     title: "Live video feed to brexit negotiations",
     image: "https://img.youtube.com/vi/M62SnbNizIM/hqdefault.jpg",
     alt: "'Zippy' puppet from TV show Rainbow",
-    caption: "Live video feed to brexit negotiations",
     youtube: {
       v: "M62SnbNizIM",
       start: 273,
