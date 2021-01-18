@@ -1,17 +1,18 @@
 import Link from "next/link";
-
+import { GetStaticProps } from "next";
 import Head from "../components/head";
 import Footer from "../components/footer";
 
-import memes from "../memes";
+import memes, { Meme } from "../memes";
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
+  const items: Meme[] = memes;
   return {
     props: {
       memes,
     },
   };
-}
+};
 
 export default function Index(props) {
   const { memes } = props;
@@ -20,9 +21,9 @@ export default function Index(props) {
     <>
       <Head title="Memes" />
 
-      <div class="memes-container">
+      <div className="memes-container">
         <blockquote
-          class="meme-definition"
+          className="meme-definition"
           cite="https://en.wiktionary.org/wiki/meme">
           <p>
             <strong>Meme</strong> ... (Internet, slang) Something, usually
@@ -32,11 +33,11 @@ export default function Index(props) {
           <cite>- Wiktionary, 2020</cite>
         </blockquote>
 
-        <ul class="memes-list">
+        <ul className="memes-list">
           {memes.map((item) => (
-            <Link href={`/${item.url}`}>
+            <Link key={item.url} href={`/${item.url}`}>
               <a>
-                <li key={item.url} class="box-shadow">
+                <li className="box-shadow">
                   <img src={item.image} alt={item.alt} />
                   <h2>{item.title}</h2>
                 </li>

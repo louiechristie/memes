@@ -1,4 +1,53 @@
-export default [
+export type Youtube = {
+  v: string;
+  start: number;
+  end: number;
+};
+
+export type Meme = {
+  url: string;
+  title: string;
+  image: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  caption?: string;
+  cite?: string;
+  youtube?: Youtube;
+  footnotes?: Footnote[];
+  customHTML?: boolean;
+};
+
+export type Footnote = {
+  text: string;
+  link: string;
+};
+
+const memes: Meme[] = [
+  {
+    url: "traditional-family",
+    title: "Bill Hicks on traditional families leaves producer speechless",
+    image: "https://img.youtube.com/vi/n-szFZ3s4tc/hq1.jpg",
+    alt: "Bill Hicks in a pub, old film footage",
+    youtube: {
+      v: "n-szFZ3s4tc",
+      start: 1 * 60,
+      end: 2 * 60 + 37,
+    },
+  },
+  {
+    url: "finland-happy",
+    title: "How the Finnish are world happiest",
+    image: "https://img.youtube.com/vi/9FPU4F-Ajh8/0.jpg",
+    alt:
+      "Woman in hat and winter clothes (looks like skiing type clothes) sits at a table in the snow, she looks unhappy.",
+    caption: "\"When you walk on the streets in Finland, people don't seem to be particularly happy, and I would actually think that might contribute positively to our sense of satisfaction... if you live among people where everyone's kind of like advertising their own happiness, like telling 'hey, look at me how happy I am' that might actually make you like more sad.\" - Frank Martela PhD Psychology, Aalto University",
+    youtube: {
+      v: "9FPU4F-Ajh8",
+      start: 217,
+      end: 240,
+    },
+  },
   {
     url: "face-masks",
     title: "If you feel that face masks don't protect you...",
@@ -15,7 +64,7 @@ export default [
     footnotes: [
       {
         text:
-          "As I was making this (during the 2020 pandemic) some fucking muppet interrupted selling door-to-door with a mask that didn't cover her nose. 😡",
+          "As I was making this (during the 2020 pandemic) some fucking muppets interrupted selling door-to-door, one with a mask that didn't cover her nose. 😡",
         link:
           "https://twitter.com/louiechristie/status/1223012411172622340?s=20",
       },
@@ -85,6 +134,7 @@ export default [
       "https://www.louiechristie.com/images/time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_1307.jpg",
     alt:
       "A cube hessian storage box with post-it notes in corners. One says 'WIN WIN'",
+    customHTML: true,
   },
   {
     url: "best-man",
@@ -130,6 +180,7 @@ export default [
       "https://embedwistia-a.akamaihd.net/deliveries/d4e3c25ccb18b0bfba2caca8ba4f1b4c1cb5a037.jpg",
     alt:
       "A man presenting a news type TV show with two guests on video link. Title reads 'TECH TALK - REMOTE WORKING'",
+    customHTML: true,
   },
   {
     url: "😬",
@@ -185,3 +236,5 @@ export default [
     },
   },
 ];
+
+export default memes;
