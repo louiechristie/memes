@@ -47,7 +47,7 @@ export default function Index(props) {
           <a href="/#experiments">experiments</a>
           <a href="/#tech-talks">talks</a>
           <a href="/intro-to-web-dev-course/">tutorials</a>
-          <a href="/memes/" class="active">memes</a>
+          <a href="/memes/" className="active">memes</a>
           <a href="/#profiles">profiles</a>
           <a href="/#about">about</a>
           <a href="/blog/contact/">contact</a>
