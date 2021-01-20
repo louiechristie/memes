@@ -37,7 +37,7 @@ export default function Index(props) {
         </a>
       </div>
       <div id="hamnav">
-        <label for="hamburger">&#9776;</label>
+        <label htmlFor="hamburger">&#9776;</label>
         <input type="checkbox" id="hamburger" />
         <div id="hamitems">
           <a href="/">

@@ -39,7 +39,7 @@ export default function Index(props: Props) {
 
         <ul className="memes-list">
           {memes.map((item) => (
-            <Link key={item.url} href={`/${item.url}`}>
+            <Link key={item.url} href={`/${item.url}`} as={`${process.env.ASSET_PREFIX}/${item.url}`}>
               <a>
                 <li className="box-shadow">
                   <img src={item.image} alt={item.alt} />
