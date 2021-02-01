@@ -25,6 +25,17 @@ export type Footnote = {
 
 const memes: Meme[] = [
   {
+    url: "home-working-space-saver-bed",
+    title: "Home working space saver bed",
+    image: "https://img.youtube.com/vi/UOHI8qdZkH8/hq1.jpg",
+    alt: "Muppets sat on a murphy space saver hideaway bed. It folds up with them in it.",
+    youtube: {
+      v: "UOHI8qdZkH8",
+      start: (2 * 60) + 2,
+      end: (2 * 60) + 17,
+    },
+  },
+  {
     url: "traditional-family",
     title: "Bill Hicks on traditional families leaves producer speechless",
     image: "https://img.youtube.com/vi/n-szFZ3s4tc/hq1.jpg",
