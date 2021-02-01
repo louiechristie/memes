@@ -25,6 +25,15 @@ export type Footnote = {
 
 const memes: Meme[] = [
   {
+    url: "how-many-computer-geeks-to-change-a-light-bulb",
+    title: "How many computer geeks does it take to change a light bulb?",
+    image: "https://i.imgflip.com/4reggs.jpg",
+    alt:
+      "Light bulb. Title reads: How many computer geeks does it take to change a light bulb? One, but I take days connecting it to the internet to save time flicking the switch. louiechristie.com © 2020",
+    caption:
+      "... one, but I take days connecting it to the internet to save time flicking the switch 💡",
+  },
+  {
     url: "home-working-space-saver-bed",
     title: "Home working space saver bed",
     image: "https://img.youtube.com/vi/UOHI8qdZkH8/hq1.jpg",
