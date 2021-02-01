@@ -9,11 +9,10 @@ import RemoteWorking from "../components/remote-working";
 interface Props {
   meme: Meme;
   errors: string;
-};
+}
 
 export default function MemeDetail(props: Props) {
-  
-  const { errors, meme} = props;
+  const { errors, meme } = props;
 
   if (errors) {
     return (
@@ -26,70 +25,85 @@ export default function MemeDetail(props: Props) {
   }
 
   const {
-      url,
-      title,
-      image,
-      width,
-      height,
-      alt,
-      caption,
-      cite,
-      youtube,
-      footnotes,
-      customHTML,
+    url,
+    title,
+    image,
+    width,
+    height,
+    alt,
+    caption,
+    cite,
+    youtube,
+    footnotes,
+    customHTML,
   } = meme;
 
+  /* https://github.com/vercel/next.js/issues/19527 */
+  if (customHTML && url === "remote-working")
+    return (
+      <>
+        <Head title={title} description={caption} image={image} />
+
+        <RemoteWorking />
+
+        <Footer />
+      </>
+    );
+
+  if (customHTML && url === "time-management")
+    return (
+      <>
+        <Head title={title} description={caption} image={image} />
+
+        <TimeManagement />
+
+        <Footer />
+      </>
+    );
+
   return (
-    <div>
+    <>
       <Head title={title} description={caption} image={image} />
 
-      {/* https://github.com/vercel/next.js/issues/19527 */}
-      {customHTML && url === "remote-working" && <RemoteWorking />}
-      {customHTML && url === "time-management" && <TimeManagement />}
+      <div className="meme-container">
+        <h1 className="meme-title">{title}</h1>
 
-      {!customHTML && (
-        <div className="meme-container">
+        <div className="meme-inner">
           {!youtube && (
-            <figure>
-                <img
-                  src={image}
-                  alt={alt}
-                  width={width || undefined}
-                  height={height || undefined}
-                />
-                {caption && (
-                  <figcaption>
-                    <blockquote>{caption}</blockquote>
-                  </figcaption>
-                )}
+            <figure className="meme-fig">
+              <img
+                src={image}
+                alt={alt}
+                width={width || undefined}
+                height={height || undefined}
+              />
+              {caption && (
+                <figcaption className="meme-fig-caption">
+                  <blockquote>{caption}</blockquote>
+                </figcaption>
+              )}
             </figure>
           )}
 
           {youtube && (
-              <figure className="youtube">
-                <div className="iframe-container">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${youtube.v}?start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`}
-                    frameBorder="0"
-                    allowFullScreen></iframe>
+            <figure className="youtube">
+              <div className="iframe-container">
+                <iframe
+                  src={`https://www.youtube.com/embed/${youtube.v}?start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`}
+                  frameBorder="0"
+                  allowFullScreen></iframe>
+              </div>
+
+              {caption && (
+                <div className={cite ? "quote" : ""}>
+                  <blockquote>{caption}</blockquote>
+                  {cite && <cite> - {cite} </cite>}
                 </div>
-
-                {cite && (
-                  <div className="quote">
-                    <blockquote>{caption}</blockquote>
-                    <cite> - {cite} </cite>
-                  </div>
-                )}
-
-                {!cite && caption && (
-                  <figcaption>
-                    <blockquote>{caption}</blockquote>
-                  </figcaption>
-                )}
-              </figure>
+              )}
+            </figure>
           )}
         </div>
-      )}
+      </div>
 
       {footnotes &&
         footnotes.map((footnote: Footnote, index: number) => {
@@ -112,9 +126,9 @@ export default function MemeDetail(props: Props) {
         })}
 
       <Footer />
-    </div>
+    </>
   );
-};
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
@@ -136,7 +150,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const meme = memes.find((meme) => meme.url === slug);
     // By returning { props: item }, the StaticPropsDetail component
     // will receive `item` as a prop at build time
-    return { props: {meme }};
+    return { props: { meme } };
   } catch (err) {
     return { props: { errors: err.message, meme: {} } };
   }
