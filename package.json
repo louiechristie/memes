@@ -1,13 +1,14 @@
 {
   "name": "memes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export && touch out/.nojekyll",
     "start": "next start",
     "lint": "tsc -p .",
-    "deploy": "npm run build && gh-pages -s '{**/*,.nojekyll}' -d out"
+    "deploy": "npm run build && gh-pages -s '{**/*,.nojekyll}' -d out",
+    "clean": "npx rimraf .next"
   },
   "dependencies": {
     "next": "10.0.5",
