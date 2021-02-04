@@ -35,6 +35,7 @@ const memes: Meme[] = [
       start: 1 * 60 + 58,
       end: 2 * 60 + 22,
     },
+    caption: "This sums up everything that is right and wrong about 'banter'",
   },
   {
     url: "how-many-computer-geeks-to-change-a-light-bulb",
