@@ -25,6 +25,18 @@ export type Footnote = {
 
 const memes: Meme[] = [
   {
+    url: "banter-is-classless",
+    title: "Banter is classless",
+    image: "https://img.youtube.com/vi/7QINKUsxiHA/hq2.jpg",
+    alt:
+      "An upper class woman from Chelsea has a date with a working class man from London. They both enjoy each other's 'banter'.",
+    youtube: {
+      v: "7QINKUsxiHA",
+      start: 1 * 60 + 58,
+      end: 2 * 60 + 22,
+    },
+  },
+  {
     url: "how-many-computer-geeks-to-change-a-light-bulb",
     title: "How many computer geeks does it take to change a light bulb?",
     image: "https://i.imgflip.com/4reggs.jpg",
@@ -37,11 +49,12 @@ const memes: Meme[] = [
     url: "home-working-space-saver-bed",
     title: "Home working space saver bed",
     image: "https://img.youtube.com/vi/UOHI8qdZkH8/hq1.jpg",
-    alt: "Muppets sat on a murphy space saver hideaway bed. It folds up with them in it.",
+    alt:
+      "Muppets sat on a murphy space saver hideaway bed. It folds up with them in it.",
     youtube: {
       v: "UOHI8qdZkH8",
-      start: (2 * 60) + 2,
-      end: (2 * 60) + 17,
+      start: 2 * 60 + 2,
+      end: 2 * 60 + 17,
     },
   },
   {
@@ -61,7 +74,8 @@ const memes: Meme[] = [
     image: "https://img.youtube.com/vi/9FPU4F-Ajh8/0.jpg",
     alt:
       "Woman in hat and winter clothes (looks like skiing type clothes) sits at a table in the snow, she looks unhappy.",
-    caption: "\"When you walk on the streets in Finland, people don't seem to be particularly happy, and I would actually think that might contribute positively to our sense of satisfaction... if you live among people where everyone's kind of like advertising their own happiness, like telling 'hey, look at me how happy I am' that might actually make you like more sad.\" - Frank Martela PhD Psychology, Aalto University",
+    caption:
+      "\"When you walk on the streets in Finland, people don't seem to be particularly happy, and I would actually think that might contribute positively to our sense of satisfaction... if you live among people where everyone's kind of like advertising their own happiness, like telling 'hey, look at me how happy I am' that might actually make you like more sad.\" - Frank Martela PhD Psychology, Aalto University",
     youtube: {
       v: "9FPU4F-Ajh8",
       start: 217,
