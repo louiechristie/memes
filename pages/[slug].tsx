@@ -38,11 +38,26 @@ export default function MemeDetail(props: Props) {
     customHTML,
   } = meme;
 
+  let description;
+
+  if (youtube) {
+    const length = youtube.end - youtube.start;
+    const mins = Math.round(length / 60) || "";
+    const sec = length % 60;
+    description = `video [${mins ? mins + " mins" : sec + " sec"}] | meme`;
+  } else {
+    description = "meme by louiechristie.com";
+  }
+
+  if (caption) {
+    description = `${description} | ${caption}`;
+  }
+
   /* https://github.com/vercel/next.js/issues/19527 */
   if (customHTML && url === "remote-working")
     return (
       <>
-        <Head title={title} description={caption} image={image} />
+        <Head title={title} description={description} image={image} />
 
         <RemoteWorking />
 
@@ -53,7 +68,7 @@ export default function MemeDetail(props: Props) {
   if (customHTML && url === "time-management")
     return (
       <>
-        <Head title={title} description={caption} image={image} />
+        <Head title={title} description={description} image={image} />
 
         <TimeManagement />
 
@@ -63,7 +78,7 @@ export default function MemeDetail(props: Props) {
 
   return (
     <>
-      <Head title={title} description={caption} image={image} />
+      <Head title={title} description={description} image={image} />
 
       <div className="meme-container">
         <h1 className="meme-title">{title}</h1>
