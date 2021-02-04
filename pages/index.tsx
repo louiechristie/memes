@@ -23,7 +23,11 @@ export default function Index(props: Props) {
 
   return (
     <>
-      <Head title="Memes" />
+      <Head
+        title="Memes | louiechristie.com"
+        description="'... (Internet, slang) Something, usually humorous, which is copied and circulated online with slight adaptations, including quizzes, basic pictures, video templates etc. - Wiktionary'"
+        image="/images/lc-icon.svg"
+      />
 
       <div className="memes-container">
         <blockquote
@@ -39,7 +43,9 @@ export default function Index(props: Props) {
 
         <ul className="memes-list">
           {memes.map((item) => (
-            <Link key={item.url} href={`${process.env.ASSET_PREFIX}/${item.url}`}>
+            <Link
+              key={item.url}
+              href={`${process.env.ASSET_PREFIX}/${item.url}`}>
               <a>
                 <li className="box-shadow">
                   <img src={item.image} alt={item.alt} />

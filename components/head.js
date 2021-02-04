@@ -10,7 +10,7 @@ export default function Index(props) {
   return (
     <div>
       <Head>
-        <title>{title} | memes | louiechristie.com</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:image" content={image} />
         <meta property="og:description" content={description} />
