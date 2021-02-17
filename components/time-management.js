@@ -112,7 +112,8 @@ export default function TimeManagement() {
       <h2>Time Management: And Now In 3D</h2>
 
       <p>
-        My new take on time management - part art exhibit, part science project.
+        My new take on time management - part art exhibit, part science project,
+        part Ikea furniture with scribbles on.
       </p>
 
       <figure className="embed">
