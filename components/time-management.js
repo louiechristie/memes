@@ -16,7 +16,7 @@ export default function TimeManagement() {
         </div>
 
         <figcaption>
-          Would you rather spend your time at a burger stand or in Fiji?
+          - Would you rather spend your time at a burger stand or in Fiji?
         </figcaption>
       </figure>
 
@@ -70,7 +70,7 @@ export default function TimeManagement() {
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/32/MerrillCoveyMatrix.png"
               alt="MerrillCoveyMatrix.png"
-              style={{ width: "300px;" }}
+              style={{ width: "300px" }}
             />
           </a>
         </div>
