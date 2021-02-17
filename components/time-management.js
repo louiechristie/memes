@@ -43,16 +43,14 @@ export default function TimeManagement() {
           <strong>Warning ⚠️</strong>: Tony Robbins does not have all the
           answers, a lot of self-help is bollocks.
         </p>
-        <p>
-          <sub>
-            (A guy a knew spent a lot of money on{" "}
-            <a href="https://www.netflix.com/title/80102204">
-              Robbin's conferences
-            </a>
-            , and later topped himself.)
-          </sub>
-        </p>
       </div>
+      <sub>
+        (A guy a knew spent a lot of money on{" "}
+        <a href="https://www.netflix.com/title/80102204">
+          Robbin's conferences
+        </a>
+        , and later topped himself.)
+      </sub>
 
       <p>
         But I always thought Robbins’s time management stuff was good, and his
