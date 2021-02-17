@@ -34,6 +34,7 @@ export default function MemeDetail(props: Props) {
     caption,
     cite,
     youtube,
+    bbc,
     footnotes,
     customHTML,
   } = meme;
@@ -83,7 +84,7 @@ export default function MemeDetail(props: Props) {
         <h1 className="meme-title">{title}</h1>
 
         <div className="meme-inner">
-          {!youtube && (
+          {!youtube && !bbc && (
             <figure className="meme-fig">
               <img
                 src={image}
@@ -113,6 +114,27 @@ export default function MemeDetail(props: Props) {
                   <blockquote>{caption}</blockquote>
                   {cite && <cite> - {cite} </cite>}
                 </div>
+              )}
+            </figure>
+          )}
+
+          {bbc && (
+            <figure className="meme-fig">
+              <a href={bbc.link}>
+                <img
+                  src={image}
+                  alt={alt}
+                  width={width || undefined}
+                  height={height || undefined}
+                />
+                <p>Watch video [2 mins]</p>
+              </a>
+              {caption && (
+                <figcaption className="meme-fig-caption">
+                  <blockquote>
+                    <p>{caption}</p>
+                  </blockquote>
+                </figcaption>
               )}
             </figure>
           )}

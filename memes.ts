@@ -16,6 +16,9 @@ export type Meme = {
   youtube?: Youtube;
   footnotes?: Footnote[];
   customHTML?: boolean;
+  bbc?: {
+    link: string;
+  };
 };
 
 export type Footnote = {
@@ -130,13 +133,12 @@ const memes: Meme[] = [
   {
     url: "bob-monkhouses-joke-book",
     title: "Bob Monkhouse's Joke Book",
-    image: "https://img.youtube.com/vi/hhUwpMSUKDQ/hq3.jpg",
+    image: "https://ichef.bbci.co.uk/images/ic/640x360/p08mm605.jpg",
     alt:
       "Black and white photo of young Bob Monkhouse and a woman. Bob is wearing a 1950's suit",
-    youtube: {
-      v: "hhUwpMSUKDQ",
-      start: 2975,
-      end: 3056,
+    bbc: {
+      link:
+        "https://www.bbc.co.uk/iplayer/episode/b00x9b7w/the-secret-life-of-bob-monkhouse#t=49m27s,",
     },
   },
   {
