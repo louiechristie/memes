@@ -145,7 +145,9 @@ export default function MemeDetail(props: Props) {
         footnotes.map((footnote: Footnote, index: number) => {
           const number = index + 1;
           return (
-            <section className="footnotes-container">
+            <section
+              className="footnotes-container"
+              key={footnote.text || index}>
               <h5>Footnotes</h5>
               <ol className="footnotes">
                 <li className="footnote">
