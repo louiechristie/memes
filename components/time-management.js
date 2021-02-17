@@ -27,8 +27,15 @@ export default function TimeManagement() {
       </p>
 
       <p>
-        The rest of the video is delightfully cheesy 1980s, and Robbins at times
-        looks like 80’s Christian Bale in American Psycho.
+        The rest of the video is delightfully cheesy 1980s, and{" "}
+        <a href="https://www.youtube.com/embed/10zNZD8tIKY?start=11&amp;end=19&amp;rel=0">
+          Robbins at times
+        </a>{" "}
+        looks like 80’s{" "}
+        <a href="https://upload.wikimedia.org/wikipedia/en/5/52/American-psycho-patrick-bateman.jpg">
+          Christian Bale in American Psycho
+        </a>
+        .
       </p>
 
       <div className="box-shadow">
