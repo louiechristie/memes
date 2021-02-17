@@ -1,6 +1,6 @@
 export default function TimeManagement() {
   return (
-    <main className="page-container" style={{maxWidth: 640}}>
+    <main className="page-container" style={{ maxWidth: 640 }}>
       <p>
         A always thought this bit of video from Tony Robbins was good at
         illustrating time management.
@@ -57,7 +57,7 @@ export default function TimeManagement() {
       <p>
         I see the NHS are recommending the time matrix thing, as created by
         President Eisenhower and publicised in the book The Seven Habits of
-        Highly Effective People - focus on the things that are
+        Highly Effective People - focus on the things that are{" "}
         <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/time-management-tips/">
           not urgent but important
         </a>{" "}
@@ -75,18 +75,18 @@ export default function TimeManagement() {
           </a>
         </div>
         <figcaption>
-          - From
+          - From{" "}
           <a href="https://commons.wikimedia.org/w/index.php?curid=2135450">
             Wikipedia
           </a>
         </figcaption>
       </figure>
 
-      <div style={{margin: '2em'}}>
+      <div style={{ margin: "2em" }}>
         <a
           className="link-box"
           href="https://www.nhs.uk/conditions/stress-anxiety-depression/feel-better-and-happy/">
-          <aside className="box-shadow column" style={{margin: '0 auto'}}>
+          <aside className="box-shadow column" style={{ margin: "0 auto" }}>
             <figure>
               6 NHS tips to help you be happier:
               <ul>
