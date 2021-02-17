@@ -40,7 +40,7 @@ export default function MemeDetail(props: Props) {
   } = meme;
 
   let longTitle = title;
-  let description = "meme | louichristie.com";
+  let description = "meme | louiechristie.com";
 
   if (youtube) {
     const length = youtube.end - youtube.start;
