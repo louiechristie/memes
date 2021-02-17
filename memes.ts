@@ -5,6 +5,7 @@ export type Youtube = {
 };
 
 export type Meme = {
+  date?: string;
   url: string;
   title: string;
   image: string;
@@ -27,6 +28,26 @@ export type Footnote = {
 };
 
 const memes: Meme[] = [
+  {
+    date: "2021-02-17T12:56:57.878Z",
+    url: "dissociation",
+    title: "How I feel when filling out questionnaires",
+    image: "https://img.youtube.com/vi/OqSg7WO4tT4/hq1.jpg",
+    alt:
+      "Tom Hanks in Saving Private Ryan - storming the beach in during D-Day spinning out in the chaos and stress.",
+    youtube: {
+      v: "OqSg7WO4tT4",
+      start: 0,
+      end: 0 * 60 + 13,
+    },
+    footnotes: [
+      {
+        text:
+          "Video: Tom Hanks in Saving Private Ryan (1998) storming the beach during D-Day (Normandy in the second World War retaking France from the Nazis.) He's trying to anyway.",
+        link: "https://www.imdb.com/title/tt0120815/",
+      },
+    ],
+  },
   {
     url: "banter-is-classless",
     title: "Banter is classless",
@@ -135,7 +156,7 @@ const memes: Meme[] = [
     title: "Bob Monkhouse's Joke Book",
     image: "https://ichef.bbci.co.uk/images/ic/640x360/p08mm605.jpg",
     alt:
-      "Black and white photo of young Bob Monkhouse and a woman. Bob is wearing a 1950's suit",
+      "Black and white photo of young Bob Monkhouse. Bob is holding a phone and grinning inanely",
     bbc: {
       link:
         "https://www.bbc.co.uk/iplayer/episode/b00x9b7w/the-secret-life-of-bob-monkhouse#t=49m27s,",
