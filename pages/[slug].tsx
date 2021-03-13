@@ -141,16 +141,14 @@ export default function MemeDetail(props: Props) {
         </div>
       </div>
 
-      {footnotes &&
-        footnotes.map((footnote: Footnote, index: number) => {
-          const number = index + 1;
-          return (
-            <section
-              className="footnotes-container"
-              key={footnote.text || index}>
-              <h5>Footnotes</h5>
-              <ol className="footnotes">
-                <li className="footnote">
+      {footnotes && (
+        <section className="footnotes-container">
+          <h5>Footnotes</h5>
+          <ol className="footnotes">
+            {footnotes.map((footnote: Footnote, index: number) => {
+              const number = index + 1;
+              return (
+                <li className="footnote" key={footnote.text || index}>
                   {footnote.text || null}&nbsp;
                   {footnote.link && (
                     <a className="ref" href={footnote.link || undefined}>
@@ -158,10 +156,11 @@ export default function MemeDetail(props: Props) {
                     </a>
                   )}
                 </li>
-              </ol>
-            </section>
-          );
-        })}
+              );
+            })}
+          </ol>
+        </section>
+      )}
 
       <Footer />
     </>
