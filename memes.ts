@@ -29,6 +29,32 @@ export type Footnote = {
 
 const memes: Meme[] = [
   {
+    date: "2021-03-13T12:25:00.878Z",
+    url: "good-news",
+    title: "The world is actually getting better",
+    image: "https://img.youtube.com/vi/jbkSRLYSojo/hq2.jpg",
+    alt:
+      "Animated graph showing the world is actually getting richer and healthier since presented by Hans Rosling.",
+    youtube: {
+      v: "jbkSRLYSojo",
+      start: 60 + 17,
+      end: 3 * 60 + 25,
+    },
+    caption: "Shame bad news sells",
+    footnotes: [
+      {
+        text:
+          "Also see: there's a reason why Steven Pinker's 'Enlightenment Now' is Bill Gate's Favourite book of all time",
+        link: "https://www.gatesnotes.com/books/enlightenment-now",
+      },
+      {
+        text: "Longer Hans Rosling Talk on the best stats you've never seen",
+        link:
+          "https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen#t-215279",
+      },
+    ],
+  },
+  {
     date: "2021-02-17T12:56:57.878Z",
     url: "dissociation",
     title: "How I feel when filling out questionnaires",
