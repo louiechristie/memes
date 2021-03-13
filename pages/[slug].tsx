@@ -1,7 +1,7 @@
 import * as React from "react";
 import Head from "../components/head";
 import Footer from "../components/footer";
-import memes, { Meme, Item } from "../memes";
+import memes, { Meme, Item, getLongTitle } from "../memes";
 import { GetStaticPaths, GetStaticProps } from "next";
 import TimeManagement from "../components/time-management";
 import RemoteWorking from "../components/remote-working";
@@ -18,7 +18,7 @@ interface BoxProps {
 
 function Box(props: BoxProps): JSX.Element {
   const { caption, cite } = props;
-  return caption || alsoSee ? (
+  return caption ? (
     <figcaption className="meme-fig-caption">
       <blockquote>
         <p>{caption}</p>
@@ -88,15 +88,8 @@ export default function MemeDetail(props: Props) {
     footnotes,
   } = meme;
 
-  let longTitle = title;
+  let longTitle = getLongTitle(meme);
   let description = "meme | louiechristie.com";
-
-  if (youtube) {
-    const length = youtube.end - youtube.start;
-    const mins = Math.round(length / 60) || "";
-    const sec = length % 60;
-    longTitle = `${title} | video [${mins ? mins + " mins" : sec + " sec"}]`;
-  }
 
   if (caption) {
     description = `${caption} | ${description}`;
@@ -130,7 +123,7 @@ export default function MemeDetail(props: Props) {
       <Head title={longTitle} description={description} image={image} />
 
       <div className="meme-container">
-        <h1 className="meme-title">{title}</h1>
+        <h1 className="meme-title">{getLongTitle(meme)}</h1>
 
         <div className="meme-inner">
           {!youtube && !bbc && (
@@ -171,7 +164,7 @@ export default function MemeDetail(props: Props) {
                   width={width || undefined}
                   height={height || undefined}
                 />
-                <p>Watch video [2 mins]</p>
+                <p>Watch video</p>
               </a>
               <Box caption={caption} cite={cite} />
             </figure>

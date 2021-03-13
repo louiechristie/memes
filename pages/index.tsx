@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 import Head from "../components/head";
 import Footer from "../components/footer";
 
-import memes, { Meme } from "../memes";
+import memes, { Meme, getLongTitle } from "../memes";
 
 export const getStaticProps: GetStaticProps = async () => {
   const items: Meme[] = memes;
@@ -49,7 +49,7 @@ export default function Index(props: Props) {
               <a>
                 <li className="box-shadow">
                   <img src={item.image} alt={item.alt} />
-                  <h2>{item.title}</h2>
+                  <h2>{getLongTitle(item)}</h2>
                 </li>
               </a>
             </Link>

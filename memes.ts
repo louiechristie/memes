@@ -28,6 +28,31 @@ export type Item = {
   link: string;
 };
 
+export const getLongTitle = (meme: Meme) => {
+  const { title, bbc, youtube, customHTML } = meme;
+  if (bbc) {
+    return `${title} [2 mins video]`;
+  } else if (youtube) {
+    const start = youtube.start;
+    const end = youtube.end;
+    const length = end - start;
+    const mins = Math.round(length / 60);
+    const sec = length % 60;
+    let denominator;
+    if (mins > 1) {
+      denominator = " mins";
+    } else if (mins > 0) {
+      denominator = " min";
+    } else {
+      denominator = " sec";
+    }
+
+    return `${title} [${mins ? mins + denominator : sec + denominator} video]`;
+  } else {
+    return title;
+  }
+};
+
 const memes: Meme[] = [
   {
     date: "2021-03-13T12:25:00.878Z",
