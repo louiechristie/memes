@@ -666,10 +666,16 @@ nav {
   }
 }
 
-.footnotes-container {
+.footnotes-container,
+.also-see-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.also-see {
+  padding-bottom: 40px;
+  /* max-width: var(--small); */
 }
 
 .footnotes {

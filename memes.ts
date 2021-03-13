@@ -15,14 +15,15 @@ export type Meme = {
   caption?: string;
   cite?: string;
   youtube?: Youtube;
-  footnotes?: Footnote[];
   customHTML?: boolean;
   bbc?: {
     link: string;
   };
+  alsoSee?: Item[];
+  footnotes?: Item[];
 };
 
-export type Footnote = {
+export type Item = {
   text: string;
   link: string;
 };
@@ -41,16 +42,23 @@ const memes: Meme[] = [
       end: 3 * 60 + 25,
     },
     caption: "Shame bad news sells",
-    footnotes: [
+    alsoSee: [
       {
         text:
-          "Also see: there's a reason why Steven Pinker's 'Enlightenment Now' is Bill Gate's Favourite book of all time",
-        link: "https://www.gatesnotes.com/books/enlightenment-now",
+          "Bill Gate's Favourite book of all time is Steven Pinker's 'Enlightenment Now'. There's a reason why. [3 min video]",
+        link: "https://www.youtube.com/watch?v=ABVVDSgihYs",
       },
       {
-        text: "Longer Hans Rosling Talk on the best stats you've never seen",
+        text:
+          "Hans Rosling full talk on the best stats you've never seen [20 min video]",
         link:
           "https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen#t-215279",
+      },
+    ],
+    footnotes: [
+      {
+        text: "Source",
+        link: "https://www.bbc.co.uk/programmes/b00wgq0l",
       },
     ],
   },

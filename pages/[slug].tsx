@@ -1,7 +1,7 @@
 import * as React from "react";
 import Head from "../components/head";
 import Footer from "../components/footer";
-import memes, { Meme, Footnote } from "../memes";
+import memes, { Meme, Item } from "../memes";
 import { GetStaticPaths, GetStaticProps } from "next";
 import TimeManagement from "../components/time-management";
 import RemoteWorking from "../components/remote-working";
@@ -9,6 +9,54 @@ import RemoteWorking from "../components/remote-working";
 interface Props {
   meme: Meme;
   errors: string;
+}
+
+interface BoxProps {
+  caption?: string;
+  cite?: string;
+}
+
+function Box(props: BoxProps): JSX.Element {
+  const { caption, cite } = props;
+  return caption || alsoSee ? (
+    <figcaption className="meme-fig-caption">
+      <blockquote>
+        <p>{caption}</p>
+      </blockquote>
+      {cite && <cite> - {cite} </cite>}
+    </figcaption>
+  ) : (
+    <></>
+  );
+}
+interface AlsoSeeProps {
+  alsoSee: Item[];
+}
+
+function AlsoSee(props: AlsoSeeProps) {
+  const { alsoSee } = props;
+
+  return (
+    alsoSee && (
+      <section className="also-see-container">
+        <h2>Also see</h2>
+        <ol>
+          {alsoSee.map((item: Item, index: number) => {
+            const number = index + 1;
+            return (
+              <li className="also-see" key={item.text || index}>
+                {item.link && (
+                  <a className="ref" href={item.link || undefined}>
+                    {item.text}
+                  </a>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    )
+  );
 }
 
 export default function MemeDetail(props: Props) {
@@ -34,9 +82,10 @@ export default function MemeDetail(props: Props) {
     caption,
     cite,
     youtube,
-    bbc,
-    footnotes,
     customHTML,
+    bbc,
+    alsoSee,
+    footnotes,
   } = meme;
 
   let longTitle = title;
@@ -109,12 +158,7 @@ export default function MemeDetail(props: Props) {
                   allowFullScreen></iframe>
               </div>
 
-              {caption && (
-                <div className={cite ? "quote" : ""}>
-                  <blockquote>{caption}</blockquote>
-                  {cite && <cite> - {cite} </cite>}
-                </div>
-              )}
+              <Box caption={caption} cite={cite} />
             </figure>
           )}
 
@@ -129,23 +173,19 @@ export default function MemeDetail(props: Props) {
                 />
                 <p>Watch video [2 mins]</p>
               </a>
-              {caption && (
-                <figcaption className="meme-fig-caption">
-                  <blockquote>
-                    <p>{caption}</p>
-                  </blockquote>
-                </figcaption>
-              )}
+              <Box caption={caption} cite={cite} />
             </figure>
           )}
         </div>
       </div>
 
+      {alsoSee && <AlsoSee alsoSee={alsoSee}></AlsoSee>}
+
       {footnotes && (
         <section className="footnotes-container">
           <h5>Footnotes</h5>
           <ol className="footnotes">
-            {footnotes.map((footnote: Footnote, index: number) => {
+            {footnotes.map((footnote: Item, index: number) => {
               const number = index + 1;
               return (
                 <li className="footnote" key={footnote.text || index}>
