@@ -38,7 +38,7 @@ const memes: Meme[] = [
       "Animated graph showing the world is actually getting richer and healthier since presented by Hans Rosling.",
     youtube: {
       v: "jbkSRLYSojo",
-      start: 60 + 17,
+      start: 2 * 60 + 49,
       end: 3 * 60 + 25,
     },
     caption: "Shame bad news sells",
