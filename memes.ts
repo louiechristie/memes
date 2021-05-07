@@ -55,6 +55,38 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "this-lifestyle-is-inhumane",
+    title: "This lifestyle is inhumane",
+    image: "http://www.sinz.org/Michael.Sinz/Art/Evolution.jpg",
+    alt:
+      "Pictures of the evolution of a human man, in a historical painted style, from hunched ape to standing naked hunter, back to man hunched over a computer naked.",
+    youtube: {
+      v: "agOdP2Bmieg",
+      start: 13 * 60 + 5,
+      end: 19 * 60 + 43,
+    },
+    caption:
+      "‟this style of knowledge work, this lifestyle, is inhumane” - Bret Victor (ex-Apple inventor)",
+    footnotes: [
+      {
+        text:
+          "‟Something, somewhere went terribly wrong” image by an unknown artist (Localoaf, 2011) cited researchgate.net 2021",
+        link:
+          "https://www.researchgate.net/figure/Something-somewhere-went-terribly-wrong-image-by-an-unknown-artist-Localoaf-2011_fig3_267398000",
+      },
+      {
+        text:
+          "Full 1 hour talk video: The Humane Representation of Thought by Bret Victor",
+        link: "https://www.youtube.com/watch?v=agOdP2Bmieg",
+      },
+      {
+        text:
+          "(He's an ex-Apple Human-Interface inventor in the Future-Interface Team)",
+        link: "http://worrydream.com/#!/Apple",
+      },
+    ],
+  },
+  {
     url: "squeezed-apple",
     title: "Squeezed Apple",
     image: "https://img.youtube.com/vi/1s1uWo1_bzg/maxresdefault.jpg",
