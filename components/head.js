@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Index(props) {
   const {
@@ -34,7 +33,7 @@ export default function Index(props) {
         <nav>
           <div id="home-button">
             <a href="/">
-              <Image
+              <img
                 src="/images/lc-icon.svg"
                 width="40"
                 height="40"

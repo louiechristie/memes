@@ -15,14 +15,4 @@ module.exports = {
 
     return config;
   },
-  images: {
-    domains: [
-      "www.louiechristie.com",
-      "img.youtube.com",
-      "www.sinz.org",
-      "embedwistia-a.akamaihd.net",
-      "i.imgflip.com",
-      "ichef.bbci.co.uk",
-    ],
-  },
 };

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function TimeManagement() {
   return (
     <main className="page-container" style={{ maxWidth: 640 }}>
@@ -74,12 +72,13 @@ export default function TimeManagement() {
       <figure className="embed column">
         <div className="image-container">
           <a href="https://commons.wikimedia.org/wiki/File:MerrillCoveyMatrix.png#/media/File:MerrillCoveyMatrix.png">
-            <Image
+            <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/32/MerrillCoveyMatrix.png"
               alt="MerrillCoveyMatrix.png"
               style={{ width: "300px" }}
               width={420}
               height={433}
+              loading="lazy"
             />
           </a>
         </div>
@@ -127,7 +126,7 @@ export default function TimeManagement() {
 
       <figure className="embed">
         <div className="image-container">
-          <Image
+          <img
             className="three-d"
             width={1920}
             height={1440}
@@ -142,6 +141,7 @@ export default function TimeManagement() {
         🤔. I'm not sure how it breaks time and space."
             title="Hessian cube box with post-it notes on it. A post-it note says win-win at the corner of 3 axis: good for me (not bad for me), good for others (not bad for others), good in the future, good now. That's four dimensions?...
         🤔. I'm not sure how it breaks time and space."
+            loading="lazy"
           />
         </div>
         <figcaption className="box-shadow">
