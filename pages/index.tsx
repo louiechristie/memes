@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GetStaticProps } from "next";
 import Head from "../components/head";
 import Footer from "../components/footer";
+import Image from "next/image";
 
 import memes, { Meme, getLongTitle } from "../memes";
 
@@ -48,7 +49,12 @@ export default function Index(props: Props) {
               href={`${process.env.ASSET_PREFIX}/${item.url}`}>
               <a>
                 <li className="box-shadow">
-                  <img src={item.image} alt={item.alt} />
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                  />
                   <h2>{getLongTitle(item)}</h2>
                 </li>
               </a>

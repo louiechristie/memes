@@ -5,6 +5,7 @@ import memes, { Meme, Item, getLongTitle } from "../memes";
 import { GetStaticPaths, GetStaticProps } from "next";
 import TimeManagement from "../components/time-management";
 import RemoteWorking from "../components/remote-working";
+import Image from "next/image";
 
 interface Props {
   meme: Meme;
@@ -128,12 +129,7 @@ export default function MemeDetail(props: Props) {
         <div className="meme-inner">
           {!youtube && !bbc && (
             <figure className="meme-fig">
-              <img
-                src={image}
-                alt={alt}
-                width={width || undefined}
-                height={height || undefined}
-              />
+              <Image src={image} alt={alt} width={width} height={height} />
               {caption && (
                 <figcaption className="meme-fig-caption">
                   <blockquote>{caption}</blockquote>
@@ -158,12 +154,7 @@ export default function MemeDetail(props: Props) {
           {bbc && (
             <figure className="meme-fig">
               <a href={bbc.link}>
-                <img
-                  src={image}
-                  alt={alt}
-                  width={width || undefined}
-                  height={height || undefined}
-                />
+                <Image src={image} alt={alt} width={width} height={height} />
                 <p>Watch video</p>
               </a>
               <Box caption={caption} cite={cite} />

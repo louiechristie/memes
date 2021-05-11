@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function TimeManagement() {
   return (
     <main className="page-container" style={{ maxWidth: 640 }}>
@@ -72,10 +74,12 @@ export default function TimeManagement() {
       <figure className="embed column">
         <div className="image-container">
           <a href="https://commons.wikimedia.org/wiki/File:MerrillCoveyMatrix.png#/media/File:MerrillCoveyMatrix.png">
-            <img
+            <Image
               src="https://upload.wikimedia.org/wikipedia/commons/3/32/MerrillCoveyMatrix.png"
               alt="MerrillCoveyMatrix.png"
               style={{ width: "300px" }}
+              width={420}
+              height={433}
             />
           </a>
         </div>
@@ -123,8 +127,10 @@ export default function TimeManagement() {
 
       <figure className="embed">
         <div className="image-container">
-          <img
+          <Image
             className="three-d"
+            width={1920}
+            height={1440}
             sizes="(max-width: 1920px) 100vw, 1920px"
             srcSet="
             ../../time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_320.jpg          320w,
