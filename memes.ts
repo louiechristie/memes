@@ -99,7 +99,7 @@ const memes: Meme[] = [
   {
     url: "squeezed-apple",
     title: "Squeezed Apple",
-    image: "https://img.youtube.com/vi/1s1uWo1_bzg/maxresdefault.jpg",
+    image: "https://img.youtube.com/vi/1s1uWo1_bzg/hqdefault.jpg",
     width: 1280,
     height: 720,
     alt: "Tim Cook being asked an uncomfortable question in a political house hearing about why developers can only sell apps throug the app store. Tim Looks like he's squeezing out a tough turd.",
