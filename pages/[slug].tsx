@@ -101,7 +101,13 @@ export default function MemeDetail(props: Props) {
   if (customHTML && url === "boris-johnsons-work-experience")
     return (
       <div>
-        <Head title={longTitle} description={description} image={image} />
+        <Head
+          title={"Is it just me? Or does Boris Johnson..."}
+          description={
+            "... increasingly look like he's doing a lot of work experience in case he looses his job?"
+          }
+          image={image}
+        />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ maxWidth: 960 }}>
             <h1>{title}</h1>
