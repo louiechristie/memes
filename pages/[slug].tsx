@@ -5,6 +5,7 @@ import memes, { Meme, Item, getLongTitle } from "../memes";
 import { GetStaticPaths, GetStaticProps } from "next";
 import TimeManagement from "../components/time-management";
 import RemoteWorking from "../components/remote-working";
+import BorisJohnsonsWorkExperience from "../components/boris-johnsons-work-experience";
 
 interface Props {
   meme: Meme;
@@ -96,10 +97,29 @@ export default function MemeDetail(props: Props) {
   }
 
   /* https://github.com/vercel/next.js/issues/19527 */
+
+  if (customHTML && url === "boris-johnsons-work-experience")
+    return (
+      <div>
+        <Head title={longTitle} description={description} image={image} />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ maxWidth: 960 }}>
+            <h1>{title}</h1>
+
+            <BorisJohnsonsWorkExperience />
+
+            <Footer />
+          </div>
+        </div>
+      </div>
+    );
+
   if (customHTML && url === "remote-working")
     return (
       <>
         <Head title={longTitle} description={description} image={image} />
+
+        <h1>{title}</h1>
 
         <RemoteWorking />
 
@@ -111,6 +131,8 @@ export default function MemeDetail(props: Props) {
     return (
       <>
         <Head title={longTitle} description={description} image={image} />
+
+        <h1>{title}</h1>
 
         <TimeManagement />
 

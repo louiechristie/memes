@@ -55,6 +55,17 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "boris-johnsons-work-experience",
+    title:
+      "Is it just me? Or does Boris Johnson increasingly look like he's doing a lot of work experience in case he looses his job?",
+    image:
+      "https://fournews-assets-prod-s3-ew1-nmprod.s3.amazonaws.com/media/2020/07/2.54703083-300x169.jpg",
+    width: 300,
+    height: 169,
+    alt: "He should try being a professional politician next.",
+    customHTML: true,
+  },
+  {
     url: "nanoseconds",
     title: "Nanoseconds",
     image: "https://img.youtube.com/vi/9eyFDBPk4Yw/0.jpg",
