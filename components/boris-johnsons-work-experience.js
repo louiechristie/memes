@@ -38,53 +38,50 @@ const images = [
 
 export default function BorisJohnsonsWorkExperience() {
   return (
-    <main className="page-container">
-      <Masonry columnsCount={3} gutter={4}>
-        {images.map((image) => (
-          <figure key={image.url}>
-            <img src={image.url} style={{ width: "100%" }} />
-            <figcaption>
-              <p>{image.title}</p>
-            </figcaption>
-          </figure>
-        ))}
-      </Masonry>
+    <div style={{ padding: 10 }}>
+      <main className="page-container">
+        <Masonry columnsCount={3} gutter={4}>
+          {images.map((image) => (
+            <figure key={image.url}>
+              <img src={image.url} style={{ width: "100%" }} />
+              <figcaption>
+                <p>{image.title}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </Masonry>
 
-      <p
-        style={{
-          textAlign: "center",
-          fontWeight: "bold",
-          fontSize: "2rem",
-          marginBottom: "5rem",
-        }}>
-        <strong>He should try being professional politician next.</strong>
-      </p>
-      <h2>Footnotes</h2>
+        <p
+          style={{
+            textAlign: "center",
+            fontWeight: "bold",
+            fontSize: "2rem",
+            marginBottom: "5rem",
+          }}>
+          <strong>He should try being professional politician next.</strong>
+        </p>
+        <h2>Footnotes</h2>
 
-      <p>
-        <sub>
-          <ul>
-            <li>
-              Collage based on{" "}
-              <a href="https://www.channel4.com/news/?s=boris">
-                Channel 4 news
-              </a>
-              , army man photo from Boris's actual own{" "}
-              <a href="https://twitter.com/BorisJohnson/status/1408045806679203845/photo/1">
-                Twitter
-              </a>
-              .
-            </li>
-          </ul>
-        </sub>
-      </p>
-      <div style={{ textAlign: "right" }}>
-        <a
-          style={{ textDecoration: "none" }}
-          href="https://comedy.louiechristie.com/gonzo/">
-          😬
-        </a>
-      </div>
-    </main>
+        <ul>
+          <li>
+            Collage based on{" "}
+            <a href="https://www.channel4.com/news/?s=boris">Channel 4 news</a>,
+            army man photo from Boris's actual own{" "}
+            <a href="https://twitter.com/BorisJohnson/status/1408045806679203845/photo/1">
+              Twitter
+            </a>
+            .
+          </li>
+        </ul>
+
+        <div style={{ textAlign: "right" }}>
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://comedy.louiechristie.com/gonzo/">
+            😬
+          </a>
+        </div>
+      </main>
+    </div>
   );
 }
