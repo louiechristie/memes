@@ -63,13 +63,19 @@ export default function BorisJohnsonsWorkExperience() {
 
       <p>
         <sub>
-          [*] Pastiche pictures from{" "}
-          <a href="https://www.channel4.com/news/?s=boris">Channel 4 news</a>{" "}
-          except the Army Man photo which comes from Boris's actual own{" "}
-          <a href="https://twitter.com/BorisJohnson/status/1408045806679203845/photo/1">
-            Twitter
-          </a>
-          .
+          <ul>
+            <li>
+              Collage based on{" "}
+              <a href="https://www.channel4.com/news/?s=boris">
+                Channel 4 news
+              </a>
+              , army man photo from Boris's actual own{" "}
+              <a href="https://twitter.com/BorisJohnson/status/1408045806679203845/photo/1">
+                Twitter
+              </a>
+              .
+            </li>
+          </ul>
         </sub>
       </p>
       <div style={{ textAlign: "right" }}>
