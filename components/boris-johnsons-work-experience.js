@@ -41,7 +41,7 @@ export default function BorisJohnsonsWorkExperience() {
     <main className="page-container">
       <Masonry columnsCount={3} gutter={4}>
         {images.map((image) => (
-          <figure>
+          <figure key={image.url}>
             <img src={image.url} style={{ width: "100%" }} />
             <figcaption>
               <p>{image.title}</p>
@@ -72,6 +72,13 @@ export default function BorisJohnsonsWorkExperience() {
           .
         </sub>
       </p>
+      <div style={{ textAlign: "right" }}>
+        <a
+          style={{ textDecoration: "none" }}
+          href="https://comedy.louiechristie.com/gonzo/">
+          😬
+        </a>
+      </div>
     </main>
   );
 }
