@@ -113,10 +113,9 @@ export default function MemeDetail(props: Props) {
             <h1>{title}</h1>
 
             <BorisJohnsonsWorkExperience />
-
-            <Footer />
           </div>
         </div>
+        <Footer />
       </div>
     );
 

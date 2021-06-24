@@ -50,10 +50,15 @@ export default function BorisJohnsonsWorkExperience() {
         ))}
       </Masonry>
 
-      <p style={{ textAlign: "center", fontWeight: "bold", fontSize: "2rem" }}>
+      <p
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          fontSize: "2rem",
+          marginBottom: "5rem",
+        }}>
         <strong>He should try being professional politician next.</strong>
       </p>
-
       <h2>Footnotes</h2>
 
       <p>
