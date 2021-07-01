@@ -2,6 +2,10 @@ import Masonry from "react-responsive-masonry";
 
 const images = [
   {
+    title: "Uber driver",
+    url: "https://ichef.bbci.co.uk/news/320/cpsprodpb/1A78/production/_119167760_gettyimages-1233746756.jpg",
+  },
+  {
     title: "Army man",
     url: "https://pbs.twimg.com/media/E4phY5OWEAAS9wz?format=jpg&name=900x900",
   },
@@ -60,19 +64,6 @@ export default function BorisJohnsonsWorkExperience() {
           }}>
           <strong>He should try being professional politician next.</strong>
         </p>
-        <h2>Footnotes</h2>
-
-        <ul>
-          <li>
-            Collage based on{" "}
-            <a href="https://www.channel4.com/news/?s=boris">Channel 4 news</a>,
-            army man photo from Boris's actual own{" "}
-            <a href="https://twitter.com/BorisJohnson/status/1408045806679203845/photo/1">
-              Twitter
-            </a>
-            .
-          </li>
-        </ul>
 
         <div style={{ textAlign: "right" }}>
           <a
