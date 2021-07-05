@@ -1,11 +1,11 @@
 import * as React from "react";
-import Head from "../components/head";
-import Footer from "../components/footer";
-import memes, { Meme, Item, getLongTitle } from "../memes";
+import Head from "../../components/head";
+import Footer from "../../components/footer";
+import memes, { Meme, Item, getLongTitle } from "../../memes";
 import { GetStaticPaths, GetStaticProps } from "next";
-import TimeManagement from "../components/time-management";
-import RemoteWorking from "../components/remote-working";
-import BorisJohnsonsWorkExperience from "../components/boris-johnsons-work-experience";
+import TimeManagement from "../../components/time-management";
+import RemoteWorking from "../../components/remote-working";
+import BorisJohnsonsWorkExperience from "../../components/boris-johnsons-work-experience";
 
 interface Props {
   meme: Meme;

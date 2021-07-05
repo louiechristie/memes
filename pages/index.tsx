@@ -45,7 +45,7 @@ export default function Index(props: Props) {
           {memes.map((item) => (
             <Link
               key={item.url}
-              href={`${process.env.ASSET_PREFIX}/${item.url}`}>
+              href={`${process.env.ASSET_PREFIX}/${item.url}/`}>
               <a>
                 <li className="box-shadow">
                   <img
