@@ -60,11 +60,11 @@ const memes: Meme[] = [
     image: "http://img.youtube.com/vi/LWGJA9i18Co/maxresdefault.jpg",
     width: 1280,
     height: 720,
-    alt: `A load of musicians piss about in weightlessness seeing what they can do, with balls, etc, to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1]."`,
-    caption: `A load of musicians piss about in weightlessness seeing what they can do, with balls, etc, to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1].`,
+    alt: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1]."`,
+    caption: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1].`,
     youtube: {
       v: "YwyXLBQUEC0",
-      start: 8 * 60 + 24,
+      start: 8 * 60 + 20,
       end: 10 * 60 + 18,
     },
     footnotes: [
