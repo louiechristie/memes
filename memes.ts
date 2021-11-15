@@ -77,7 +77,7 @@ const memes: Meme[] = [
   {
     url: "egg-timer-films",
     title: `Sandi Toksvig's advice: "stick em up on YouTube... make, er, you know, egg timer films"`,
-    image: "https://cdn.kapwing.com/final_60f14edf31803a00a079c81e_192259.png",
+    image: "http://img.youtube.com/vi/bjSCeUZfHxQ/maxresdefault.jpg",
     width: 1280,
     height: 720,
     alt: `Sandi Toksvig's advice: "stick em up on YouTube, I think I would make, er, you know, egg timer films, kind of 4 minute films and try and do some comedy in that time, and er, and er, make sure you just get the word out of what you are doing. \n\nI don't think you necessarily have to wait on the big agents and the big producers any more. You can get out and do it yourself."`,
