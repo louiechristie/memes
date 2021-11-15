@@ -55,6 +55,26 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "truly-agile-development",
+    title: `Truly agile development`,
+    image: "http://img.youtube.com/vi/LWGJA9i18Co/maxresdefault.jpg",
+    width: 1280,
+    height: 720,
+    alt: `A load of musicians piss about in weightlessness seeing what they can do, with balls, etc, to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1]."`,
+    caption: `A load of musicians piss about in weightlessness seeing what they can do, with balls, etc, to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1].`,
+    youtube: {
+      v: "YwyXLBQUEC0",
+      start: 8 * 60 + 24,
+      end: 10 * 60 + 18,
+    },
+    footnotes: [
+      {
+        text: "The end result is amazing",
+        link: "https://www.youtube.com/watch?v=LWGJA9i18Co",
+      },
+    ],
+  },
+  {
     url: "egg-timer-films",
     title: `Sandi Toksvig's advice: "stick em up on YouTube... make, er, you know, egg timer films"`,
     image: "https://cdn.kapwing.com/final_60f14edf31803a00a079c81e_192259.png",
