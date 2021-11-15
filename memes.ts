@@ -116,7 +116,7 @@ const memes: Meme[] = [
     url: "this-lifestyle-is-inhumane",
     title: "This lifestyle is inhumane",
     image:
-      "https://www.researchgate.net/figure/Something-somewhere-went-terribly-wrong-image-by-an-unknown-artist-Localoaf-2011_fig3_267398000/download",
+      "https://www.researchgate.net/profile/James-Shraiky/publication/267398000/figure/fig3/AS:513274615926784@1499385612224/Something-somewhere-went-terribly-wrong-image-by-an-unknown-artist-Localoaf-2011.png",
     width: 578,
     height: 200,
     alt: "Pictures of the evolution of a human man, in a historical painted style, from hunched ape to standing naked hunter, back to man hunched over a computer naked.",
