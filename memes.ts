@@ -93,7 +93,7 @@ const memes: Meme[] = [
     title:
       "Is it just me? Or does Boris Johnson increasingly look like he's doing a lot of work experience in case he looses his job?",
     image:
-      "https://fournews-assets-prod-s3-ew1-nmprod.s3.amazonaws.com/media/2020/07/2.54703083-300x169.jpg",
+      "https://www.thenational.scot/resources/images/13270998.jpg?type=article-full",
     width: 300,
     height: 169,
     alt: "He should try being a professional politician next.",
