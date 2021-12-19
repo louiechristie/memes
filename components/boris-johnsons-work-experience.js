@@ -48,7 +48,7 @@ export default function BorisJohnsonsWorkExperience() {
   return (
     <div style={{ padding: 10 }}>
       <main className="page-container">
-        <Masonry columnsCount={3} gutter={"4"}>
+        <Masonry columnsCount={3} gutter={4}>
           {images.map((image) => (
             <figure key={image.url}>
               <img src={image.url} style={{ width: "100%" }} />
