@@ -55,6 +55,20 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "should-i-use-redux",
+    title: `Should I use Redux?`,
+    image: "https://img.youtube.com/vi/XEt09iK8IXs/hq2.jpg",
+    width: 1280,
+    height: 720,
+    alt: `Dan Abramov on Zoom call with another geeky looking guy`,
+    caption: `According to the creator of Redux`,
+    youtube: {
+      v: "XEt09iK8IXs",
+      start: 5 * 60 + 32,
+      end: 5 * 60 + 50,
+    },
+  },
+  {
     url: "truly-agile-development",
     title: `Truly agile development`,
     image: "http://img.youtube.com/vi/LWGJA9i18Co/maxresdefault.jpg",
