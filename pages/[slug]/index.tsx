@@ -244,13 +244,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // It won't be called on client-side, so you can even do
 // direct database queries.
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  try {
-    const slug = params?.slug;
-    const meme = memes.find((meme) => meme.url === slug);
-    // By returning { props: item }, the StaticPropsDetail component
-    // will receive `item` as a prop at build time
-    return { props: { meme } };
-  } catch (err) {
-    return { props: { errors: err.message, meme: {} } };
-  }
+  const slug = params?.slug;
+  const meme = memes.find((meme) => meme.url === slug);
+  // By returning { props: item }, the StaticPropsDetail component
+  // will receive `item` as a prop at build time
+  return { props: { meme } };
 };
