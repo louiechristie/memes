@@ -70,7 +70,7 @@ const memes: Meme[] = [
   // },
   {
     url: "react-or-angular",
-    title: `React or Angular`,
+    title: `React or Angular [tech]`,
     image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
     width: 1280,
     height: 720,
