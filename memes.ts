@@ -70,7 +70,7 @@ const memes: Meme[] = [
   // },
   {
     url: "react-or-angular",
-    title: `React or Angular [tech]`,
+    title: `React or Angular <tech>`,
     image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
     width: 1280,
     height: 720,
@@ -90,7 +90,7 @@ const memes: Meme[] = [
   },
   {
     url: "should-i-use-redux",
-    title: `Should I use Redux?`,
+    title: `Should I use Redux? <tech>`,
     image: "https://img.youtube.com/vi/XEt09iK8IXs/hq2.jpg",
     width: 1280,
     height: 720,
@@ -155,7 +155,7 @@ const memes: Meme[] = [
   },
   {
     url: "nanoseconds",
-    title: "Nanoseconds",
+    title: "Nanoseconds <tech>",
     image: "https://img.youtube.com/vi/9eyFDBPk4Yw/0.jpg",
     width: 480,
     height: 360,
