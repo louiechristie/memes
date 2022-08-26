@@ -54,6 +54,40 @@ export const getLongTitle = (meme: Meme) => {
 };
 
 const memes: Meme[] = [
+  // Blocked by YouTube adult content filter
+  // {
+  //   url: "thank-fuck-its-friday",
+  //   title: `Thank Fuck It's Friday`,
+  //   image: "https://img.youtube.com/vi/TLDyugzWk1s/sddefault.jpg",
+  //   width: 1280,
+  //   height: 720,
+  //   alt: `Close up of David Brent smiling, he's wearing a white shirt an boring tie.`,
+  //   youtube: {
+  //     v: "TLDyugzWk1s",
+  //     start: 4 * 60 + 35,
+  //     end: 5 * 60 + 24,
+  //   },
+  // },
+  {
+    url: "react-or-angular",
+    title: `React or Angular`,
+    image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
+    width: 1280,
+    height: 720,
+    alt: `White bearded hipster guy giving a talk at a lecturn. He is wearning a dark denim shirt buttoned up to the top geek chic style. The title is 'The Present Future Of User Interface Development'. A 3D graph looks like a mountain range but more curved like boobs. On boob is labelled 'Old methodology, local productivity maxima', the other bigger boob is labelled 'Adopt new methodology, temoprary loss of productivity'`,
+    caption: `React 😉`,
+    youtube: {
+      v: "HGf89S1N930",
+      start: 597,
+      end: 619,
+    },
+    footnotes: [
+      {
+        text: "Objective statistics about 'Front-end frameworks popularity (React, Vue, Angular and Svelte)'",
+        link: "https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190",
+      },
+    ],
+  },
   {
     url: "should-i-use-redux",
     title: `Should I use Redux?`,
@@ -67,6 +101,12 @@ const memes: Meme[] = [
       start: 5 * 60 + 32,
       end: 5 * 60 + 50,
     },
+    footnotes: [
+      {
+        text: "The end result is amazing",
+        link: "https://www.youtube.com/watch?v=LWGJA9i18Co",
+      },
+    ],
   },
   {
     url: "truly-agile-development",
