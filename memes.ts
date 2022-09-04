@@ -70,7 +70,7 @@ const memes: Meme[] = [
   // },
   {
     url: "react-or-angular",
-    title: `React or Angular <tech>`,
+    title: `React or Angular (tech)`,
     image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
     width: 1280,
     height: 720,
@@ -90,7 +90,7 @@ const memes: Meme[] = [
   },
   {
     url: "should-i-use-redux",
-    title: `Should I use Redux? <tech>`,
+    title: `Should I use Redux? (tech)`,
     image: "https://img.youtube.com/vi/XEt09iK8IXs/hq2.jpg",
     width: 1280,
     height: 720,
@@ -103,8 +103,8 @@ const memes: Meme[] = [
     },
     footnotes: [
       {
-        text: "The end result is amazing",
-        link: "https://www.youtube.com/watch?v=LWGJA9i18Co",
+        text: "Truly agile development",
+        link: "https://www.louiechristie.com/memes/truly-agile-development/",
       },
     ],
   },
@@ -114,8 +114,8 @@ const memes: Meme[] = [
     image: "http://img.youtube.com/vi/LWGJA9i18Co/maxresdefault.jpg",
     width: 1280,
     height: 720,
-    alt: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1]."`,
-    caption: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good. The end result is amazing[1].`,
+    alt: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good."`,
+    caption: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good.`,
     youtube: {
       v: "YwyXLBQUEC0",
       start: 8 * 60 + 20,
@@ -155,7 +155,7 @@ const memes: Meme[] = [
   },
   {
     url: "nanoseconds",
-    title: "Nanoseconds <tech>",
+    title: "Nanoseconds (tech)",
     image: "https://img.youtube.com/vi/9eyFDBPk4Yw/0.jpg",
     width: 480,
     height: 360,
