@@ -74,7 +74,7 @@ const memes: Meme[] = [
     image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
     width: 1280,
     height: 720,
-    alt: `White bearded hipster guy giving a talk at a lecturn. He is wearning a dark denim shirt buttoned up to the top geek chic style. The title is 'The Present Future Of User Interface Development'. A 3D graph looks like a mountain range but more curved like boobs. On boob is labelled 'Old methodology, local productivity maxima', the other bigger boob is labelled 'Adopt new methodology, temoprary loss of productivity'`,
+    alt: `White bearded hipster guy giving a talk at a lectern. He is wearing a dark denim shirt buttoned up to the top geek chic style. The title is 'The Present Future Of User Interface Development'. A 3D graph looks like a mountain range but more curved like boobs. On boob is labelled 'Old methodology, local productivity maxima', the other bigger boob is labelled 'Adopt new methodology, temoprary loss of productivity'`,
     caption: `React 😉`,
     youtube: {
       v: "HGf89S1N930",
