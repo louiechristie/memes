@@ -69,6 +69,30 @@ const memes: Meme[] = [
   //   },
   // },
   {
+    url: "classical-sad-music",
+    title: `Classical Sad Music`,
+    image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
+    width: 1280,
+    height: 720,
+    alt: `Kevin and Perry in an Ibiza nightclub get puked on while Classical sad music plays Barber's Adagio for Strings`,
+    caption: `It's called Barber's Adagio for Strings - the classic sad music they used to play at the end of the night in Ibiza`,
+    youtube: {
+      v: "GvtpEpCvcao",
+      start: 71,
+      end: 2 * 60 + 47,
+    },
+    footnotes: [
+      {
+        text: "From Kevin and Perry Go Large (2000), watch on Amazon.com [sponsored link]",
+        link: "https://amzn.to/3Jl3NFE",
+      },
+      {
+        text: "As mentioned in Music Natters podcast #5, but I forgot it's name. The podcast was about tunes that make Nigel Thomas cry",
+        link: "https://open.spotify.com/episode/4DorROsFRfj276qaUwrOem?si=de72b8c222f04ce6",
+      },
+    ],
+  },
+  {
     url: "react-or-angular",
     title: `React or Angular (tech)`,
     image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
