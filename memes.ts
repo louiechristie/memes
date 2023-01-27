@@ -71,7 +71,7 @@ const memes: Meme[] = [
   {
     url: "classical-sad-music",
     title: `Classical Sad Music`,
-    image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
+    image: "http://img.youtube.com/vi/GvtpEpCvcao/0.jpg",
     width: 1280,
     height: 720,
     alt: `Kevin and Perry in an Ibiza nightclub get puked on while Classical sad music plays Barber's Adagio for Strings`,
