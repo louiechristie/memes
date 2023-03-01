@@ -54,20 +54,26 @@ export const getLongTitle = (meme: Meme) => {
 };
 
 const memes: Meme[] = [
-  // Blocked by YouTube adult content filter
-  // {
-  //   url: "thank-fuck-its-friday",
-  //   title: `Thank Fuck It's Friday`,
-  //   image: "https://img.youtube.com/vi/TLDyugzWk1s/sddefault.jpg",
-  //   width: 1280,
-  //   height: 720,
-  //   alt: `Close up of David Brent smiling, he's wearing a white shirt an boring tie.`,
-  //   youtube: {
-  //     v: "TLDyugzWk1s",
-  //     start: 4 * 60 + 35,
-  //     end: 5 * 60 + 24,
-  //   },
-  // },
+  {
+    url: "deal-with-the-devil",
+    title: `Deal with the Devil`,
+    image: "http://img.youtube.com/vi/wWXc1irvrU4/1.jpg",
+    width: 1280,
+    height: 720,
+    alt: `Zoom video call with many faces`,
+    caption: `Farewell Faustus`,
+    youtube: {
+      v: "wWXc1irvrU4",
+      start: 4296,
+      end: 1 * 60 * 60 + 12 * 60 + 12, // 1:12:12
+    },
+    footnotes: [
+      {
+        text: "From the play Doctor Faustus by Christopher Marlowe. Marlowe is buried in an unmarked grave in Deptford after being stabbed in the eye.",
+        link: "https://www.newcrossities.com/marlowes-grave/",
+      },
+    ],
+  },
   {
     url: "classical-sad-music",
     title: `Classical Sad Music`,
@@ -92,6 +98,20 @@ const memes: Meme[] = [
       },
     ],
   },
+  // Blocked by YouTube adult content filter
+  // {
+  //   url: "thank-fuck-its-friday",
+  //   title: `Thank Fuck It's Friday`,
+  //   image: "https://img.youtube.com/vi/TLDyugzWk1s/sddefault.jpg",
+  //   width: 1280,
+  //   height: 720,
+  //   alt: `Close up of David Brent smiling, he's wearing a white shirt an boring tie.`,
+  //   youtube: {
+  //     v: "TLDyugzWk1s",
+  //     start: 4 * 60 + 35,
+  //     end: 5 * 60 + 24,
+  //   },
+  // },
   {
     url: "react-or-angular",
     title: `React or Angular (tech)`,
