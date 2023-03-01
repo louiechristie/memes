@@ -55,6 +55,19 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "diseases-of-despair",
+    title: `Diseases of despair`,
+    image: "http://img.youtube.com/vi/7FqXDJkko_I/0.jpg",
+    width: 1280,
+    height: 720,
+    alt: `Frankie Boyle and Bernie Sanders faces. Caption reads 'When Frankie Met Bernie'`,
+    youtube: {
+      v: "7FqXDJkko_I",
+      start: 41 * 60 + 7, // 41:22
+      end: 2495,
+    },
+  },
+  {
     url: "deal-with-the-devil",
     title: `Deal with the Devil`,
     image: "http://img.youtube.com/vi/wWXc1irvrU4/1.jpg",
