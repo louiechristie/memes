@@ -55,6 +55,26 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "some-will-wome-wont-so-what-next",
+    title: `Some Will, Some Won't, So What, Next!`,
+    image: "https://img.youtube.com/vi/8OITgP5qJ0c/0.jpg",
+    width: 1280,
+    height: 720,
+    alt: `Nev from the call centre chatting to and admin staff woman in an office`,
+    youtube: {
+      v: "8OITgP5qJ0c",
+      start: 0,
+      end: 1 * 60 + 13,
+    },
+    caption: "Some Will, Some Won't, So What, Next!",
+    footnotes: [
+      {
+        text: "It's Nev from BBC's The Call Centre",
+        link: "https://www.bbc.co.uk/programmes/b02w3fnr",
+      },
+    ],
+  },
+  {
     url: "diseases-of-despair",
     title: `Diseases of despair`,
     image: "http://img.youtube.com/vi/7FqXDJkko_I/0.jpg",
