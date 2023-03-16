@@ -66,7 +66,7 @@ const memes: Meme[] = [
       start: 0,
       end: 1 * 60 + 13,
     },
-    caption: "Some Will, Some Won't, So What, Next!",
+    caption: "Some Will, Some Won't, So What, Next! (SWSWSWN)",
     footnotes: [
       {
         text: "It's Nev from BBC's The Call Centre",
