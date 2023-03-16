@@ -55,7 +55,7 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
-    url: "some-will-wome-wont-so-what-next",
+    url: "some-will-some-wont-so-what-next",
     title: `Some Will, Some Won't, So What, Next!`,
     image: "https://img.youtube.com/vi/8OITgP5qJ0c/0.jpg",
     width: 1280,
