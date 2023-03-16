@@ -1,7 +1,12 @@
 import * as React from "react";
 import Head from "../../components/head";
 import Footer from "../../components/footer";
-import memes, { Meme, Item, getLongTitle } from "../../memes";
+import memes, {
+  Meme,
+  Item,
+  getLongTitle,
+  getVideoDescriptor,
+} from "../../memes";
 import { GetStaticPaths, GetStaticProps } from "next";
 import TimeManagement from "../../components/time-management";
 import RemoteWorking from "../../components/remote-working";
@@ -90,9 +95,12 @@ export default function MemeDetail(props: Props) {
   } = meme;
 
   let longTitle = getLongTitle(meme);
+  let videoDescriptor = getVideoDescriptor(meme);
   let description = "meme | louiechristie.com";
 
-  if (caption) {
+  if (youtube) {
+    description = `${videoDescriptor} | ${description}`;
+  } else {
     description = `${caption} | ${description}`;
   }
 

@@ -28,11 +28,18 @@ export type Item = {
   link: string;
 };
 
-export const getLongTitle = (meme: Meme) => {
+const limit = (string: string, length: number, end = "..."): string => {
+  return string.length < length
+    ? string
+    : `${string.substring(0, length)}${end}`;
+};
+
+export const getVideoDescriptor = (meme: Meme): string => {
   const { title, bbc, youtube, customHTML } = meme;
-  if (bbc) {
-    return `${title} [2 mins video]`;
-  } else if (youtube) {
+
+  let descriptor = `${title} [2 mins video]`;
+
+  if (youtube) {
     const start = youtube.start;
     const end = youtube.end;
     const length = end - start;
@@ -47,7 +54,27 @@ export const getLongTitle = (meme: Meme) => {
       denominator = " sec";
     }
 
-    return `${title} [${mins ? mins + denominator : sec + denominator} video]`;
+    descriptor = `[${mins ? mins + denominator : sec + denominator} video]`;
+  }
+  return descriptor;
+};
+
+export const getLongTitle = (meme: Meme) => {
+  const { title, bbc, youtube, customHTML } = meme;
+
+  const MAX_LENGTH_OF_OPENGRAPH_TITLE = 55; // https://www.contentkingapp.com/academy/open-graph/#:~:text=Keep%20your%20og%3Atitle%20under,file%20size%20under%208%20MB%20.
+
+  if (bbc) {
+    return `${title} [2 mins video]`;
+  } else if (youtube) {
+    const maxLengthOfTitleWithoutDescriptor =
+      MAX_LENGTH_OF_OPENGRAPH_TITLE - getVideoDescriptor(meme).length;
+
+    return `${limit(
+      title,
+      maxLengthOfTitleWithoutDescriptor,
+      "..."
+    )} ${getVideoDescriptor(meme)}`;
   } else {
     return title;
   }
