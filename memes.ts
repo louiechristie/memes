@@ -29,7 +29,7 @@ export type Item = {
 };
 
 const limit = (string: string, length: number, end = "..."): string => {
-  return string.length < length
+  return string.length <= length + 1
     ? string
     : `${string.substring(0, length)}${end}`;
 };
@@ -81,6 +81,48 @@ export const getLongTitle = (meme: Meme) => {
 };
 
 const memes: Meme[] = [
+  {
+    url: "debugging-the-right-way",
+    title: "Debugging The Right Way (tech)",
+    image: "http://img.youtube.com/vi/PUv66718DII/0.jpg",
+    width: 1280,
+    height: 720,
+    alt: "A man in a darkened conference room gives a talk standing to the side of a lectern. The wallpaper is brown-ish patterned hotel style (not expensive) the man's clothes are casual - slacks, short sleve grey shirt. The video quality is not high definition, looks old (it's from 2012)",
+    caption:
+      "Bret Victor's Code Time Travel, in space, for debugging code, the right way.",
+    youtube: {
+      v: "PUv66718DII",
+      start: 0 * 60 * 60 + 11 * 60 + 40,
+      end: 0 * 60 * 60 + 14 * 60 + 31,
+    },
+    footnotes: [
+      {
+        text: "Bret Victor - Inventing on Principle (2012)",
+        link: "https://www.youtube.com/watch?v=PUv66718DII",
+      },
+    ],
+  },
+  {
+    url: "redux-was-actually-about-time-travel",
+    title: "Redux was actually about time travel (tech)",
+    image: "http://img.youtube.com/vi/8pDqJVdNa44/0.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Title: React.js Documentary by HoneyPot, over blue tinted images of computer geeks like Dan Abromov (white, male, young)",
+    caption:
+      "According to the React.js Documentary, to understand Redux You really need to understand  Bret Viktor's time travel.",
+    youtube: {
+      v: "8pDqJVdNa44",
+      start: 1 * 60 * 60 + 7 * 60 + 51,
+      end: 1 * 60 * 60 + 8 * 60 + 52,
+    },
+    footnotes: [
+      {
+        text: "See Bret Victor's Code Time Travel, in space, for debugging code, the right way.",
+        link: "../debugging-the-right-way",
+      },
+    ],
+  },
   {
     url: "some-will-some-wont-so-what-next",
     title: `Some Will, Some Won't, So What, Next!`,
