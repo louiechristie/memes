@@ -87,7 +87,7 @@ const memes: Meme[] = [
     image: "http://img.youtube.com/vi/PUv66718DII/0.jpg",
     width: 1280,
     height: 720,
-    alt: "A man in a darkened conference room gives a talk standing to the side of a lectern. The wallpaper is brown-ish patterned hotel style (not expensive) the man's clothes are casual - slacks, short sleve grey shirt. The video quality is not high definition, looks old (it's from 2012)",
+    alt: "A man in a darkened conference room gives a talk standing to the side of a lectern. The wallpaper is brown-ish patterned hotel style (not expensive) the man's clothes are casual - slacks, short sleeve grey shirt. The video quality is not high definition, looks old (it's from 2012)",
     caption:
       "Bret Victor's Code Time Travel, in space, for debugging code, the right way.",
     youtube: {
@@ -125,11 +125,11 @@ const memes: Meme[] = [
   },
   {
     url: "some-will-some-wont-so-what-next",
-    title: `Some Will, Some Won't, So What, Next!`,
+    title: "Some Will, Some Won't, So What, Next!",
     image: "https://img.youtube.com/vi/8OITgP5qJ0c/0.jpg",
     width: 1280,
     height: 720,
-    alt: `Nev from the call centre chatting to and admin staff woman in an office`,
+    alt: "Nev from the call centre chatting to and admin staff woman in an office",
     youtube: {
       v: "8OITgP5qJ0c",
       start: 0,
@@ -145,11 +145,11 @@ const memes: Meme[] = [
   },
   {
     url: "diseases-of-despair",
-    title: `Diseases of despair`,
+    title: "Diseases of despair",
     image: "http://img.youtube.com/vi/7FqXDJkko_I/0.jpg",
     width: 1280,
     height: 720,
-    alt: `Frankie Boyle and Bernie Sanders faces. Caption reads 'When Frankie Met Bernie'`,
+    alt: "Frankie Boyle and Bernie Sanders faces. Caption reads 'When Frankie Met Bernie'",
     youtube: {
       v: "7FqXDJkko_I",
       start: 41 * 60 + 7, // 41:22
@@ -158,12 +158,12 @@ const memes: Meme[] = [
   },
   {
     url: "deal-with-the-devil",
-    title: `Deal with the Devil`,
+    title: "Deal with the Devil",
     image: "http://img.youtube.com/vi/wWXc1irvrU4/1.jpg",
     width: 1280,
     height: 720,
-    alt: `Zoom video call with many faces`,
-    caption: `Farewell Faustus`,
+    alt: "Zoom video call with many faces",
+    caption: "Farewell Faustus",
     youtube: {
       v: "wWXc1irvrU4",
       start: 4296,
@@ -178,12 +178,13 @@ const memes: Meme[] = [
   },
   {
     url: "classical-sad-music",
-    title: `Classical Sad Music`,
+    title: "Classical Sad Music",
     image: "http://img.youtube.com/vi/GvtpEpCvcao/0.jpg",
     width: 1280,
     height: 720,
-    alt: `Kevin and Perry in an Ibiza nightclub get puked on while Classical sad music plays Barber's Adagio for Strings`,
-    caption: `It's called Barber's Adagio for Strings - the classic sad music they used to play at the end of the night in Ibiza`,
+    alt: "Kevin and Perry in an Ibiza nightclub get puked on while Classical sad music plays Barber's Adagio for Strings",
+    caption:
+      "It's called Barber's Adagio for Strings - the classic sad music they used to play at the end of the night in Ibiza",
     youtube: {
       v: "GvtpEpCvcao",
       start: 71,
@@ -203,11 +204,11 @@ const memes: Meme[] = [
   // Blocked by YouTube adult content filter
   // {
   //   url: "thank-fuck-its-friday",
-  //   title: `Thank Fuck It's Friday`,
+  //   title: "Thank Fuck It's Friday",
   //   image: "https://img.youtube.com/vi/TLDyugzWk1s/sddefault.jpg",
   //   width: 1280,
   //   height: 720,
-  //   alt: `Close up of David Brent smiling, he's wearing a white shirt an boring tie.`,
+  //   alt: "Close up of David Brent smiling, he's wearing a white shirt an boring tie.",
   //   youtube: {
   //     v: "TLDyugzWk1s",
   //     start: 4 * 60 + 35,
@@ -216,12 +217,12 @@ const memes: Meme[] = [
   // },
   {
     url: "react-or-angular",
-    title: `React or Angular (tech)`,
+    title: "React or Angular (tech)",
     image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
     width: 1280,
     height: 720,
-    alt: `White bearded hipster guy giving a talk at a lectern. He is wearing a dark denim shirt buttoned up to the top geek chic style. The title is 'The Present Future Of User Interface Development'. A 3D graph looks like a mountain range but more curved like boobs. On boob is labelled 'Old methodology, local productivity maxima', the other bigger boob is labelled 'Adopt new methodology, temoprary loss of productivity'`,
-    caption: `React 😉`,
+    alt: "White bearded hipster guy giving a talk at a lectern. He is wearing a dark denim shirt buttoned up to the top geek chic style. The title is 'The Present Future Of User Interface Development'. A 3D graph looks like a mountain range but more curved like boobs. On boob is labelled 'Old methodology, local productivity maxima', the other bigger boob is labelled 'Adopt new methodology, temporary loss of productivity'",
+    caption: "React 😉",
     youtube: {
       v: "HGf89S1N930",
       start: 597,
@@ -236,12 +237,12 @@ const memes: Meme[] = [
   },
   {
     url: "should-i-use-redux",
-    title: `Should I use Redux? (tech)`,
+    title: "Should I use Redux? (tech)",
     image: "https://img.youtube.com/vi/XEt09iK8IXs/hq2.jpg",
     width: 1280,
     height: 720,
-    alt: `Dan Abramov on Zoom call with another geeky looking guy`,
-    caption: `According to the creator of Redux`,
+    alt: "Dan Abramov on Zoom call with another geeky looking guy",
+    caption: "According to the creator of Redux",
     youtube: {
       v: "XEt09iK8IXs",
       start: 5 * 60 + 32,
@@ -256,12 +257,13 @@ const memes: Meme[] = [
   },
   {
     url: "truly-agile-development",
-    title: `Truly agile development`,
+    title: "Truly agile development",
     image: "http://img.youtube.com/vi/LWGJA9i18Co/maxresdefault.jpg",
     width: 1280,
     height: 720,
-    alt: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good."`,
-    caption: `A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choriography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good.`,
+    alt: "A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choreography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good.",
+    caption:
+      "A load of musicians piss about in weightlessness seeing what they can do, with balls, hats and flips - to make a music video. The crew aren't impressed because there is no choreography. Then the musicians come back for a second iteration to make the film, now they know what they can do and what looks good.",
     youtube: {
       v: "YwyXLBQUEC0",
       start: 8 * 60 + 20,
@@ -291,7 +293,7 @@ const memes: Meme[] = [
   {
     url: "boris-johnsons-work-experience",
     title:
-      "Is it just me? Or does Boris Johnson increasingly look like he's doing a lot of work experience in case he looses his job?",
+      "Is it just me? Or does Boris Johnson increasingly look like he's doing a lot of work experience in case he loses his job?",
     image:
       "https://www.thenational.scot/resources/images/13270998.jpg?type=article-full",
     width: 300,
@@ -305,7 +307,7 @@ const memes: Meme[] = [
     image: "https://img.youtube.com/vi/9eyFDBPk4Yw/0.jpg",
     width: 480,
     height: 360,
-    alt: "Grace hopper on chat show Letterman (late night TV old footage) holds a peice of wire that demonstrates the maximum distance an electron can travel in a nanosecond.",
+    alt: "Grace hopper on chat show Letterman (late night TV old footage) holds a piece of wire that demonstrates the maximum distance an electron can travel in a nanosecond.",
     youtube: {
       v: "lGTEUtS5H7I",
       start: 1 * 60 + 59,
@@ -348,7 +350,7 @@ const memes: Meme[] = [
     image: "https://img.youtube.com/vi/1s1uWo1_bzg/hqdefault.jpg",
     width: 1280,
     height: 720,
-    alt: "Tim Cook being asked an uncomfortable question in a political house hearing about why developers can only sell apps throug the app store. Tim Looks like he's squeezing out a tough turd.",
+    alt: "Tim Cook being asked an uncomfortable question in a political house hearing about why developers can only sell apps through the app store. Tim Looks like he's squeezing out a tough turd.",
     youtube: {
       v: "1s1uWo1_bzg",
       start: 1 * 60 * 60 + 14 * 60 + 6,
@@ -443,7 +445,7 @@ const memes: Meme[] = [
     image: "https://img.youtube.com/vi/UOHI8qdZkH8/hq1.jpg",
     width: 480,
     height: 360,
-    alt: "Muppets sat on a murphy space saver hideaway bed. It folds up with them in it.",
+    alt: "Muppets sat on a Murphy space saver hideaway bed. It folds up with them in it.",
     youtube: {
       v: "UOHI8qdZkH8",
       start: 2 * 60 + 2,
@@ -585,7 +587,7 @@ const memes: Meme[] = [
   },
   {
     url: "leave",
-    title: "Live video feed to brexit negotiations",
+    title: "Live video feed to Brexit negotiations",
     image: "https://img.youtube.com/vi/M62SnbNizIM/hqdefault.jpg",
     width: 480,
     height: 360,
@@ -657,7 +659,7 @@ const memes: Meme[] = [
     image: "https://img.youtube.com/vi/fCjsUxbNmIs/hqdefault.jpg",
     width: 480,
     height: 360,
-    alt: "Back to the future Delorean car with characters played by Michael J. Fox, Elisabeth Shue and Christopher Lloyd sat in the front. Christopher Lloyd is dressed as mad professor 'Doc' Brown and is wearing a futuristic silver sunglasses visor.",
+    alt: "Back to the future DeLorean car with characters played by Michael J. Fox, Elisabeth Shue and Christopher Lloyd sat in the front. Christopher Lloyd is dressed as mad professor 'Doc' Brown and is wearing a futuristic silver sunglasses visor.",
     youtube: {
       v: "fCjsUxbNmIs",
       start: 110,

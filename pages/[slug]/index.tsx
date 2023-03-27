@@ -112,7 +112,7 @@ export default function MemeDetail(props: Props) {
         <Head
           title={"Is it just me? Or does Boris Johnson..."}
           description={
-            "... increasingly look like he's doing a lot of work experience in case he looses his job?"
+            "... increasingly look like he's doing a lot of work experience in case he loses his job?"
           }
           image={image}
         />
