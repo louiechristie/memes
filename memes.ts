@@ -82,6 +82,25 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "virtually-funny",
+    title: "Virtually Funny",
+    image: "http://img.youtube.com/vi/xIT9NU-KazA/0.jpg",
+    width: 1280,
+    height: 720,
+    alt: "A man in a darkened conference room gives a talk standing to the side of a lectern. The wallpaper is brown-ish patterned hotel style (not expensive) the man's clothes are casual - slacks, short sleeve grey shirt. The video quality is not high definition, looks old (it's from 2012)",
+    youtube: {
+      v: "xIT9NU-KazA",
+      start: 0 * 60 * 60 + 17 * 60 + 48,
+      end: 0 * 60 * 60 + 19 * 60 + 1,
+    },
+    footnotes: [
+      {
+        text: "It's the Unknown Theater in Meta Horizon Worlds",
+        link: "https://unknowntheater.world/",
+      },
+    ],
+  },
+  {
     url: "debugging-the-right-way",
     title: "Debugging The Right Way (tech)",
     image: "http://img.youtube.com/vi/PUv66718DII/0.jpg",
