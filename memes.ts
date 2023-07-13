@@ -82,6 +82,25 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "underground-comedy",
+    title: "Underground Comedy",
+    image: "http://img.youtube.com/vi/bjSCeUZfHxQ/0.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Sean Walsh talks to Nigel Thomas and looks concerned. Paul Chowdhry is in the background. It looks like a post match football scene with sponsor logos on the wall behind. Only they are for Lidl.",
+    youtube: {
+      v: "bjSCeUZfHxQ",
+      start: 60,
+      end: 1 * 60 + 24,
+    },
+    footnotes: [
+      {
+        text: "The origin story of 'Underground Comedy'",
+        link: "https://www.youtube.com/watch?v=T8UWhctUHBc&list=PLnMojcFwW5uK5UcABVKNNly-n_K6DCBbv&t=140",
+      },
+    ],
+  },
+  {
     url: "virtually-funny",
     title: "Virtually Funny",
     image: "http://img.youtube.com/vi/xIT9NU-KazA/0.jpg",
