@@ -1,5 +1,3 @@
-import Masonry from "react-responsive-masonry";
-
 const images = [
   {
     title: "Police man",
@@ -48,7 +46,12 @@ export default function BorisJohnsonsWorkExperience() {
   return (
     <div style={{ padding: 10 }}>
       <main className="page-container">
-        <Masonry columnsCount={3} gutter={"4px"}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "auto auto auto",
+            columnGap: 20,
+          }}>
           {images.map((image) => (
             <figure key={image.url}>
               <img src={image.url} style={{ width: "100%" }} />
@@ -57,7 +60,7 @@ export default function BorisJohnsonsWorkExperience() {
               </figcaption>
             </figure>
           ))}
-        </Masonry>
+        </div>
 
         <p
           style={{
