@@ -342,14 +342,14 @@ const memes: Meme[] = [
   {
     url: "nanoseconds",
     title: "Nanoseconds (tech)",
-    image: "https://img.youtube.com/vi/9eyFDBPk4Yw/0.jpg",
+    image: "https://img.youtube.com/vi/oE2uls6iIEU/0.jpg",
     width: 480,
     height: 360,
     alt: "Grace hopper on chat show Letterman (late night TV old footage) holds a piece of wire that demonstrates the maximum distance an electron can travel in a nanosecond.",
     youtube: {
-      v: "lGTEUtS5H7I",
-      start: 1 * 60 + 59,
-      end: 2 * 60 + 26,
+      v: "oE2uls6iIEU",
+      start: 4 * 60 + 56,
+      end: 5 * 60 + 26,
     },
   },
   {
