@@ -24,7 +24,6 @@ export default function Index(props) {
         <link
           href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Roboto:400,900&display=swap"
           rel="stylesheet"
-          rel="preload"
         />
         <meta name="monetization" content="$ilp.gatehub.net/484331722" />
       </Head>
