@@ -82,6 +82,19 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "the-moment-uk-lost-eurovision-2023",
+    title: "The Moment UK Lost Eurovision (2023)",
+    image: "http://img.youtube.com/vi/tvJEE2ryCRQ/2.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Woman holding a microphone, on a stage in front of an audience. She looks like a British woman on a Friday night out, only she's in a massive TV studio.",
+    youtube: {
+      v: "tvJEE2ryCRQ",
+      start: 1 * 60 + 49,
+      end: 1 * 60 + 51,
+    },
+  },
+  {
     url: "underground-comedy",
     title: "Underground Comedy",
     image: "http://img.youtube.com/vi/bjSCeUZfHxQ/0.jpg",
