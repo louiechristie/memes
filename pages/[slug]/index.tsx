@@ -115,6 +115,8 @@ export default function MemeDetail(props: Props) {
             "... increasingly look like he's doing a lot of work experience in case he loses his job?"
           }
           image={image}
+          url={url}
+          alt=""
         />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ maxWidth: 960 }}>
@@ -130,7 +132,13 @@ export default function MemeDetail(props: Props) {
   if (customHTML && url === "remote-working")
     return (
       <>
-        <Head title={longTitle} description={description} image={image} />
+        <Head
+          title={longTitle}
+          description={description}
+          image={image}
+          alt={alt}
+          url={url}
+        />
 
         <h1>{title}</h1>
 
@@ -143,7 +151,13 @@ export default function MemeDetail(props: Props) {
   if (customHTML && url === "time-management")
     return (
       <>
-        <Head title={longTitle} description={description} image={image} />
+        <Head
+          title={longTitle}
+          description={description}
+          image={image}
+          alt={alt}
+          url={url}
+        />
 
         <h1>{title}</h1>
 
@@ -155,7 +169,13 @@ export default function MemeDetail(props: Props) {
 
   return (
     <>
-      <Head title={longTitle} description={description} image={image} />
+      <Head
+        title={longTitle}
+        description={description}
+        image={image}
+        alt={alt}
+        url={url}
+      />
 
       <div className="meme-container">
         <h1 className="meme-title">{getLongTitle(meme)}</h1>

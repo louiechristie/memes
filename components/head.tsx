@@ -1,23 +1,35 @@
 import Head from "next/head";
+import { Meme } from "../memes";
 
-export default function Index(props) {
+type Props =
+  | Pick<Meme, "title" | "caption" | "image" | "url" | "alt"> & {
+      description?: string;
+    };
+
+export default function Index(props: Props) {
   const {
     title = "memes | louiechristie.com",
     description = "... (Internet, slang) Something, usually humorous, which is copied and circulated online with slight adaptations, including quizzes, basic pictures, video templates etc.",
     image = "/images/lc-icon.svg",
+    url = "",
+    alt = "louiechristie.com icon, L C initials handwritten",
+    caption,
   } = props;
+
+  const siteUrl = "https://www.louiechristie.com/memes/";
 
   return (
     <div>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta name="description" content={description || caption} />
+        <meta property="og:type" content="article" />
         <meta property="og:image" content={image} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta property="twitter:card" content="summary" />
+        <meta property="og:url" content={`${siteUrl}${url}`} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image:alt" content={alt} />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 

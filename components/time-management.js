@@ -132,7 +132,7 @@ export default function TimeManagement() {
             height={1440}
             sizes="(max-width: 1920px) 100vw, 1920px"
             srcSet="
-            ../../time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_320.jpg          320w,
+            ../../images/time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_320.jpg          320w,
             ../../images/time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_1307.jpg 1307w,
             ../../images/time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_1920.jpg 1920w
           "

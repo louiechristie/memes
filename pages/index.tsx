@@ -26,7 +26,15 @@ export default function Index(props: Props) {
       <Head
         title="Memes | louiechristie.com"
         description="'... (Internet, slang) Something, usually humorous, which is copied and circulated online with slight adaptations, including quizzes, basic pictures, video templates etc. - Wiktionary'"
-        image="/images/lc-icon.svg"
+        image={
+          memes.find((item) => item.url === "valuable-lesson")?.image ||
+          "/images/lc-icon.svg"
+        }
+        alt={
+          memes.find((item) => item.url === "valuable-lesson")?.alt ||
+          "louiechristie.com icon, L C initials handwritten"
+        }
+        url={""}
       />
 
       <div className="memes-container">
