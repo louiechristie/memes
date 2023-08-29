@@ -82,12 +82,29 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "pulling-the-plug",
+    title: "Pulling the plug",
+    image: "http://img.youtube.com/vi/Jto3m5-SZv0/2.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Stand up comedy club in virtual reality in a dark lounge with wooden walls",
+    caption:
+      "So the good thing about doing stand-up comedy on a pirate ship in virtual reality at 3am, \n\n\n is when you get heckled by a drunk guy, you can pull the plug and flood the room.",
+    youtube: {
+      v: "Jto3m5-SZv0",
+      start: 46 * 60 + 49,
+      end: 3011,
+    },
+  },
+  {
     url: "the-moment-uk-lost-eurovision-2023",
     title: "The Moment UK Lost Eurovision (2023)",
     image: "http://img.youtube.com/vi/tvJEE2ryCRQ/2.jpg",
     width: 1280,
     height: 720,
-    alt: "Woman holding a microphone, on a stage in front of an audience. She looks like a British woman on a Friday night out, only she's in a massive TV studio.",
+    alt: "Stand up comedy club in virtual reality in a dark lounge with wooden walls",
+    caption:
+      "Woman holding a microphone, on a stage in front of an audience. She looks like a British woman on a Friday night out, only she's in a massive TV studio.",
     youtube: {
       v: "tvJEE2ryCRQ",
       start: 1 * 60 + 49,
