@@ -19,7 +19,7 @@ interface Props {
 }
 
 export default function Index(props: Props) {
-  const { memes } = props;
+  const memes = props.memes.filter((item) => !item.unlisted);
 
   return (
     <>

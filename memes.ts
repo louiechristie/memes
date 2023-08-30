@@ -21,6 +21,7 @@ export type Meme = {
   };
   alsoSee?: Item[];
   footnotes?: Item[];
+  unlisted?: boolean;
 };
 
 export type Item = {
@@ -96,6 +97,7 @@ const memes: Meme[] = [
       start: 46 * 60 + 49,
       end: 3011,
     },
+    unlisted: true,
   },
   {
     url: "the-moment-uk-lost-eurovision-2023",
