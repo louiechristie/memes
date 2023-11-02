@@ -83,6 +83,20 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "steve-jobs-rather-hire-coder-who-did-comedy",
+    title: "Steve Jobs rather hire coder who did comedy",
+    image: "http://img.youtube.com/vi/ecKgqJRvZ5M/2.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Bald guy sat at a microphone in front of a wooden table in techy office with men's toys on shelves (tech mostly). He's sat in a video gaming chair.  In a room that is otherwise sparse and spacious with wooden floors",
+    caption: `"He could go out and hire, because he's Apple, the best software coder in the world - but he'd rather hire a great software coder who also did stand-up comedy."  - Apple exec Andy Miller on Steve Jobs`,
+    youtube: {
+      v: "ecKgqJRvZ5M",
+      start: 10 * 60 + 51,
+      end: 11 * 60 + 24,
+    },
+  },
+  {
     url: "pulling-the-plug",
     title: "Pulling the plug",
     image:
