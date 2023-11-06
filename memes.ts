@@ -95,7 +95,14 @@ const memes: Meme[] = [
       start: 10 * 60 + 51,
       end: 11 * 60 + 24,
     },
+    footnotes: [
+      {
+        text: "What does UX and stand-up comedy have in common? More than you realize",
+        link: "https://uxdesign.cc/what-does-ux-and-stand-up-comedy-have-in-common-more-than-you-realise-d18066aeaecf",
+      },
+    ],
   },
+
   {
     url: "pulling-the-plug",
     title: "Pulling the plug",
