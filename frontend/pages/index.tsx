@@ -54,18 +54,16 @@ export default function Index(props: Props) {
             <Link
               key={item.url}
               href={`${process.env.ASSET_PREFIX}/${item.url}/`}>
-              <a>
-                <li className="box-shadow">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    width={item.width}
-                    height={item.height}
-                    loading="lazy"
-                  />
-                  <h2>{getLongTitle(item)}</h2>
-                </li>
-              </a>
+              <li className="box-shadow">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  width={item.width}
+                  height={item.height}
+                  loading="lazy"
+                />
+                <h2>{getLongTitle(item)}</h2>
+              </li>
             </Link>
           ))}
         </ul>
