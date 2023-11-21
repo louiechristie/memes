@@ -15,13 +15,13 @@
     "clean": "npx rimraf .next"
   },
   "dependencies": {
-    "next": "^12.3.4",
+    "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.16.19",
-    "@types/react": "^17.0.62",
-    "typescript": "^4.9.5"
+    "@types/node": "^20.9.3",
+    "@types/react": "^18.2.38",
+    "typescript": "^5.3.2"
   }
 }
