@@ -1,0 +1,27 @@
+{
+  "name": "@memes/frontend",
+  "version": "0.2.0",
+  "private": true,
+  "author": {
+    "name": "Louie Christie",
+    "url": "https://www.louiechristie.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export && touch out/.nojekyll",
+    "start": "next start",
+    "lint": "tsc -p .",
+    "deploy": "npm run build && rsync -avP ~/Documents/memes/out/ pi@192.168.178.29:/var/www/html/memes",
+    "clean": "npx rimraf .next"
+  },
+  "dependencies": {
+    "next": "^12.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.19",
+    "@types/react": "^17.0.62",
+    "typescript": "^4.9.5"
+  }
+}
