@@ -7,14 +7,19 @@ export default function RemoteWorking() {
           allowFullScreen></iframe>
       </div>
       <cite>
-        Sponsored by "REMOTE"{" "}
+        Sponsored by &quot;REMOTE&quot;{" "}
         <a href="https://basecamp.com/books/remote?wvideo=n54m1lmixt">
           more info
         </a>{" "}
         <a href="https://amzn.to/2XFcgb9">[Ad] Buy it</a>
       </cite>
 
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
         <blockquote className="twitter-tweet">
           <p lang="en" dir="ltr">
             Coronavirus discount! I just got REMOTE WORK audiobook for free:

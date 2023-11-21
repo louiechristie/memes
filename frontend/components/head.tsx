@@ -33,10 +33,6 @@ export default function Index(props: Props) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Roboto:400,900&display=swap"
-          rel="stylesheet"
-        />
         <meta name="monetization" content="$ilp.gatehub.net/484331722" />
       </Head>
 

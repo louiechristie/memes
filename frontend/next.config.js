@@ -5,6 +5,7 @@ const isProd = (process.env.NODE_ENV || "production") === "production";
 const assetPrefix = isProd ? "/memes" : "";
 
 module.exports = {
+  output: "export",
   assetPrefix: assetPrefix,
   webpack: (config) => {
     config.plugins.push(

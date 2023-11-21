@@ -47,7 +47,7 @@ export default function TimeManagement() {
       <sub>
         (A guy a knew spent a lot of money on{" "}
         <a href="https://www.netflix.com/title/80102204">
-          Robbin's conferences
+          Robbin&apos;s conferences
         </a>
         , and later topped himself.)
       </sub>
@@ -66,7 +66,7 @@ export default function TimeManagement() {
         <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/time-management-tips/">
           not urgent but important
         </a>{" "}
-        - so that's not self help bollocks.
+        - so that&apos;s not self help bollocks.
       </p>
 
       <figure className="embed column">
@@ -161,8 +161,8 @@ export default function TimeManagement() {
             <li>good now (not bad now).</li>
           </ol>
           <p>
-            That's four dimensions?... I'm not sure how it breaks time and
-            space.
+            That&apos;s four dimensions?... I&apos;m not sure how it breaks time
+            and space.
           </p>
         </figcaption>
       </figure>
