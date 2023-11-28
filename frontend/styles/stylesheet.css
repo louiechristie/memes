@@ -94,7 +94,6 @@ footer {
 header {
   margin-bottom: 2em;
   /* border-bottom: 1px solid #e8eaed; */
-  border-bottom: 4px solid var(--complementary-color);
   /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45); */
 }
 
@@ -615,7 +614,7 @@ nav {
 }
 #hamitems a {
   width: 20%; /* 100% / 5 tabs = 20% */
-  padding: 10px;
+  padding: 11px;
   color: white;
   text-decoration: none;
   text-align: center;

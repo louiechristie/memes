@@ -62,7 +62,7 @@ export default function Index(props: Props) {
               <a href="/memes/" className="active">
                 memes
               </a>
-              <a href="/podcasts/">podcasts</a>
+              <a href="https://www.musicnatters.com">podcasts</a>
               <a href="/#profiles">profiles</a>
               <a href="/#about">about</a>
               <a href="/blog/contact/">contact</a>
