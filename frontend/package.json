@@ -10,7 +10,7 @@
     "build": "next build && touch out/.nojekyll",
     "start": "next start",
     "lint": "tsc -p . && next lint",
-    "deploy": "npm run build && rsync -avP ~/Documents/memes/frontend/out/ pi@192.168.178.29:/var/www/html/memes",
+    "deploy": "npm run build && rsync -avP ./out/ pi@192.168.178.29:/var/www/html/memes",
     "clean": "npx rimraf .next"
   },
   "dependencies": {
