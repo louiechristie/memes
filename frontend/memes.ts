@@ -103,10 +103,16 @@ const memes: Meme[] = [
       start: 169,
       end: 5 * 60 + 50,
     },
+    caption:
+      "Headphones on 🎧 / sound on 🔈 - from the Music Natters Podcast. ",
     footnotes: [
       {
         text: "Virtual Reality Stand-up Comedy",
         link: "https://comedy.louiechristie.com/vr-comedy/",
+      },
+      {
+        text: "Music Natters Podcast",
+        link: "https://www.musicnatters.com/",
       },
     ],
   },
