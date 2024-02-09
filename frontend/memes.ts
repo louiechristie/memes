@@ -1,7 +1,14 @@
+enum Descriptor {
+  podcast,
+}
+
 export type Youtube = {
   v: string;
   start: number;
   end: number;
+  list?: string;
+  index?: number;
+  descriptor?: Descriptor;
 };
 
 export type Meme = {
@@ -83,6 +90,27 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "hokey-cokey-in-virtual-reality",
+    title: "Hokey Cokey In Virtual Reality",
+    image: "https://i3.ytimg.com/vi/9XyQCHBqmzQ/maxresdefault.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Two men one is wearing aviator sunglasses, a beany hat, leather jacket, beard, the other is less urban looking, blonde and clean cut.",
+    youtube: {
+      list: "PLnMojcFwW5uISj9c7gZACcJqJqYndWyxP",
+      index: 15,
+      v: "a4fVW2RF7aM",
+      start: 169,
+      end: 5 * 60 + 50,
+    },
+    footnotes: [
+      {
+        text: "Virtual Reality Stand-up Comedy",
+        link: "https://comedy.louiechristie.com/vr-comedy/",
+      },
+    ],
+  },
+  {
     url: "steve-jobs-rather-hire-coder-who-did-comedy",
     title: "Steve Jobs rather hire coder who did comedy",
     image: "http://img.youtube.com/vi/ecKgqJRvZ5M/2.jpg",
@@ -95,14 +123,7 @@ const memes: Meme[] = [
       start: 10 * 60 + 51,
       end: 11 * 60 + 24,
     },
-    footnotes: [
-      {
-        text: "What does UX and stand-up comedy have in common? More than you realize",
-        link: "https://uxdesign.cc/what-does-ux-and-stand-up-comedy-have-in-common-more-than-you-realise-d18066aeaecf",
-      },
-    ],
   },
-
   {
     url: "pulling-the-plug",
     title: "Pulling the plug",

@@ -202,7 +202,7 @@ export default function MemeDetail(props: Props) {
             <figure className="youtube">
               <div className="iframe-container">
                 <iframe
-                  src={`https://www.youtube.com/embed/${youtube.v}?start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`}
+                  src={`https://www.youtube.com/embed/${youtube.v}?${youtube.list && `list=${youtube.list}`}${youtube.index && `&index=${youtube.index}`}&start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} // prettier-ignore
                   frameBorder="0"
                   allowFullScreen></iframe>
               </div>
