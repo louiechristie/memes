@@ -14,14 +14,14 @@
     "clean": "npx rimraf .next"
   },
   "dependencies": {
-    "eslint-config-next": "^14.0.3",
-    "next": "^14.1.0",
+    "eslint-config-next": "^14.1.2",
+    "next": "^14.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.9.3",
-    "@types/react": "^18.2.38",
-    "typescript": "^5.3.2"
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.63",
+    "typescript": "^5.3.3"
   }
 }
