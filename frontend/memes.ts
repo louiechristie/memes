@@ -90,6 +90,22 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "exercise-to-reduce-anxiety",
+    title: "Exercise To Reduce Anxiety?",
+    image: "http://img.youtube.com/vi/dzUDhstqXbg/1.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Guy being interviewed in a grey studio at a microphone. He is clean cut with short hair and middle aged. Looks like he went to a good university and had a privileged upbringing. Which he did, he's a doctor.",
+    youtube: {
+      index: 15,
+      v: "dzUDhstqXbg",
+      start: 55 * 60 + 5,
+      end: 57 * 60 + 20,
+    },
+    caption:
+      "According To TV Doctor. (Part of a longer video about not eating processed food which was, ironically, sponsored by Huel.)",
+  },
+  {
     url: "hokey-cokey-in-virtual-reality",
     title: "Hokey Cokey In Virtual Reality",
     image: "https://i3.ytimg.com/vi/9XyQCHBqmzQ/maxresdefault.jpg",
