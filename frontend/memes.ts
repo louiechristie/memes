@@ -111,7 +111,7 @@ const memes: Meme[] = [
     image: "https://i3.ytimg.com/vi/9XyQCHBqmzQ/maxresdefault.jpg",
     width: 1280,
     height: 720,
-    alt: "Two men one is wearing aviator sunglasses, a beany hat, leather jacket, beard, the other is less urban looking, blonde and clean cut.",
+    alt: "Two men one is wearing aviator sunglasses, a beanie hat, leather jacket, beard, the other is less urban looking, blonde and clean cut.",
     youtube: {
       list: "PLnMojcFwW5uISj9c7gZACcJqJqYndWyxP",
       index: 15,
@@ -158,10 +158,19 @@ const memes: Meme[] = [
       "So the good thing about doing stand-up comedy on a pirate ship in virtual reality at 3am, \n\n\n is when you get heckled by a drunk guy, you can pull the plug and flood the room.",
     youtube: {
       v: "Jto3m5-SZv0",
-      start: 46 * 60 + 49,
+      start: 48 * 60 + 49,
       end: 3011,
     },
-    unlisted: true,
+    footnotes: [
+      {
+        text: "Virtual Reality Stand-up Comedy",
+        link: "https://comedy.louiechristie.com/vr-comedy/",
+      },
+      {
+        text: "Hokey Cokey In Virtual Reality [3 mins video]",
+        link: "../hokey-cokey-in-virtual-reality/",
+      },
+    ],
   },
   {
     url: "the-moment-uk-lost-eurovision-2023",
