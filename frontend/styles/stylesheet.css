@@ -681,3 +681,15 @@ nav {
   padding-right: 10px;
   max-width: 640px;
 }
+
+.time-management figcaption {
+  color: grey;
+}
+
+.time-management p {
+  line-height: 1.8em;
+}
+
+.time-management h2 {
+  margin-top: 2em;
+}

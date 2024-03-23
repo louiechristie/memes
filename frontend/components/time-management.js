@@ -3,8 +3,8 @@ export default function x() {
     <div style={{ display: "flex", justifyContent: "center" }}>
       <div className="time-management">
         <p>
-          I always thought this bit of video from Tony Robbins was good at
-          illustrating time management.
+          I thought this bit of video from Tony Robbins was good at illustrating
+          time management.
         </p>
 
         <figure className="hero">
@@ -16,14 +16,14 @@ export default function x() {
               allowFullScreen></iframe>
           </div>
 
-          <figcaption style={{ color: "grey" }}>
+          <figcaption>
             - Would you rather spend your time at a burger stand or in Fiji?
           </figcaption>
         </figure>
 
         <p>
           The main takeaway from Robbins: time management is actually all about
-          using emotion, focus on some goal in the future that will make you
+          using emotion to focus on some goal in the future that will make you
           happy.
         </p>
 
@@ -89,7 +89,7 @@ export default function x() {
             />
           </div>
           <figcaption>
-            - Source: From{" "}
+            - Source:
             <a href="https://en.wikipedia.org/wiki/First_Things_First_(book)">
               Wikipedia
             </a>
