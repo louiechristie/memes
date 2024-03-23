@@ -675,3 +675,9 @@ nav {
 .footnote {
   font-size: 0.8em;
 }
+
+.time-management {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 640px;
+}
