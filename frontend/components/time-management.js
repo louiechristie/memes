@@ -60,9 +60,11 @@ export default function x() {
           </p>
         </div>
 
+        <p>But I always thought Robbins’s time management stuff was good.</p>
+
         <p>
-          But I always thought Robbins’s time management stuff was good, and his
-          investment advice.
+          (And his investment advice apart from the part about spending lots of
+          money on his courses.)
         </p>
 
         <h2>Also on time management</h2>
