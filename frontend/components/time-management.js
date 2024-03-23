@@ -89,7 +89,7 @@ export default function x() {
             />
           </div>
           <figcaption>
-            - Source:
+            - Source:{" "}
             <a href="https://en.wikipedia.org/wiki/First_Things_First_(book)">
               Wikipedia
             </a>
