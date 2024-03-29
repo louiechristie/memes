@@ -23,8 +23,7 @@ export default function x() {
 
         <p>
           The main takeaway from Robbins: time management is actually all about
-          using emotion to focus on some goal in the future that will make you
-          happy.
+          using emotion to focus on some goal in the future.
         </p>
 
         <p>
