@@ -3,7 +3,7 @@ import { Meme } from "../memes";
 
 type Props =
   | Pick<Meme, "title" | "caption" | "image" | "url" | "alt"> & {
-      description?: string;
+      description: string;
     };
 
 export default function Index(props: Props) {

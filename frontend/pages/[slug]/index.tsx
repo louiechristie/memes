@@ -100,7 +100,7 @@ export default function MemeDetail(props: Props) {
 
   if (youtube) {
     description = `${videoDescriptor} | ${description}`;
-  } else {
+  } if (caption) {
     description = `${caption} | ${description}`;
   }
 
