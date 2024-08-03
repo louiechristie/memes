@@ -676,8 +676,10 @@ const memes: Meme[] = [
     width: 640,
     height: 360,
     alt: "Black and white photo of young Bob Monkhouse. Bob is holding a phone and grinning inanely",
-    bbc: {
-      link: "https://www.bbc.co.uk/iplayer/episode/b00x9b7w/the-secret-life-of-bob-monkhouse#t=49m27s,",
+    youtube: {
+      v: "Xq2jShSSKSM",
+      start: 49 * 60 + 19,
+      end: 50 * 60 + 56,
     },
   },
   {
