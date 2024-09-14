@@ -27,7 +27,11 @@ export type Meme = {
     link: string;
   };
   alsoSee?: Item[];
-  footnotes?: Item[];
+  footnotes?:
+    | Item[]
+    | {
+        text: string;
+      };
   unlisted?: boolean;
 };
 
@@ -89,6 +93,30 @@ export const getLongTitle = (meme: Meme) => {
 };
 
 const memes: Meme[] = [
+  {
+    url: "how-to-bring-in-a-land-value-tax",
+    title: "How To Bring In a Land Value Tax",
+    image: "http://img.youtube.com/vi/hHR7KCa1WxE/1.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Guy being interviewed who looks a bit like Ben Elton in a white room, looks like a home study/office, with a bookshelf behind him with many leather bound books.",
+    youtube: {
+      index: 15,
+      v: "hHR7KCa1WxE",
+      start: 42 * 60 + 49,
+      end: 43 * 60 + 12,
+    },
+    caption: "If only tax was interesting. A land value tax, what a good idea.",
+    footnotes: [
+      {
+        text: "From the man who brought down conservative chancellor Nadhim Zahawi over £3.7 million tax irregularities",
+        link: "https://en.wikipedia.org/wiki/Dan_Neidle#Nadhim_Zahawi",
+      },
+      {
+        text: "SDLT - Stamp Duty Land Tax ",
+      },
+    ],
+  },
   {
     url: "exercise-to-reduce-anxiety",
     title: "Exercise To Reduce Anxiety?",
