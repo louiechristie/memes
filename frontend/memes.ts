@@ -27,17 +27,18 @@ export type Meme = {
     link: string;
   };
   alsoSee?: Item[];
-  footnotes?:
-    | Item[]
-    | {
-        text: string;
-      };
+  footnotes?: Footnote[];
   unlisted?: boolean;
 };
 
 export type Item = {
   text: string;
   link: string;
+};
+
+export type Footnote = {
+  text: string;
+  link?: string;
 };
 
 const limit = (string: string, length: number, end = "..."): string => {

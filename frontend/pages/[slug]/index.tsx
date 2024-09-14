@@ -6,6 +6,7 @@ import memes, {
   Item,
   getLongTitle,
   getVideoDescriptor,
+  Footnote,
 } from "../../memes";
 import { GetStaticPaths, GetStaticProps } from "next";
 import TimeManagement from "../../components/time-management";
@@ -100,7 +101,8 @@ export default function MemeDetail(props: Props) {
 
   if (youtube) {
     description = `${videoDescriptor} | ${description}`;
-  } if (caption) {
+  }
+  if (caption) {
     description = `${caption} | ${description}`;
   }
 
@@ -204,7 +206,8 @@ export default function MemeDetail(props: Props) {
                 <iframe
                   src={`https://www.youtube.com/embed/${youtube.v}?${youtube.list && `list=${youtube.list}`}${youtube.index && `&index=${youtube.index}`}&start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} // prettier-ignore
                   frameBorder="0"
-                  allowFullScreen></iframe>
+                  allowFullScreen
+                ></iframe>
               </div>
 
               <Box caption={caption} cite={cite} />
@@ -235,7 +238,7 @@ export default function MemeDetail(props: Props) {
         <section className="footnotes-container">
           <h5>Footnotes</h5>
           <ol className="footnotes">
-            {footnotes.map((footnote: Item, index: number) => {
+            {footnotes.map((footnote: Footnote, index: number) => {
               const number = index + 1;
               return (
                 <li className="footnote" key={footnote.text || index}>
