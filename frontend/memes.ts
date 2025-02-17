@@ -215,7 +215,7 @@ const memes: Meme[] = [
     footnotes: [
       {
         text: "The origin story of 'Underground Comedy'",
-        link: "https://www.youtube.com/watch?v=T8UWhctUHBc&list=PLnMojcFwW5uK5UcABVKNNly-n_K6DCBbv&t=140",
+        link: "https://www.youtube.com/watch?v=T8UWhctUHBc&list=PLnMojcFwW5uK5UcABVKNNly-n_K6DCBbv&t=140&rel=0",
       },
     ],
   },
