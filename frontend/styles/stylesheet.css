@@ -57,26 +57,6 @@ header {
   padding-top: 8px;
 }
 
-nav {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  border-bottom: 1px solid grey;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav li {
-  display: inline;
-  margin: 4px;
-}
-
-[aria-current] {
-  font-weight: bold;
-}
-
 .center {
   display: grid;
   align-items: center;
