@@ -37,11 +37,31 @@ export default function Index(props: Props) {
       </Head>
 
       <header>
-        <iframe
-          src="https://www.louiechristie.com/menu"
-          style={{ width: "100%", height: "200px" }}
-          frameBorder="0"
-        ></iframe>
+      
+        <div className="center">
+          <div>
+            <img src="https://www.louiechristie.com/images/handwritten_louie_christie_600x220.jpg" alt="handwritten Louie Christie"></img>
+          </div>
+          <nav style={{display: "inline-block"}}>
+            <ul className="nav nav-tabs">
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.louiechristie.com/">home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.louiechristie.com/tech/">tech</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.louiechristie.com/adventure/">adventure</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.louiechristie.com/comedy/">comedy</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.louiechristie.com/about/">about</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
     </div>
   );
