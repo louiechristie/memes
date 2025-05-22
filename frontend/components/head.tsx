@@ -40,7 +40,7 @@ export default function Index(props: Props) {
         <iframe
           src="https://www.louiechristie.com/menu"
           style={{ width: "100%", height: "100px" }}
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
       </header>
     </div>
