@@ -399,7 +399,7 @@ const memes: Meme[] = [
     width: 1280,
     height: 720,
     alt: "Dan Abramov on Zoom call with another geeky looking guy",
-    caption: "According to the creator of Redux",
+    caption: `"I wouldn't" according to the creator of Redux`,
     youtube: {
       v: "XEt09iK8IXs",
       start: 5 * 60 + 32,
