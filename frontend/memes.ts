@@ -407,8 +407,8 @@ const memes: Meme[] = [
     },
     footnotes: [
       {
-        text: "Truly agile development",
-        link: "https://www.louiechristie.com/memes/truly-agile-development/",
+        text: "Redux was actually about time travel",
+        link: "https://www.louiechristie.com/memes/redux-was-actually-about-time-travel/",
       },
     ],
   },
