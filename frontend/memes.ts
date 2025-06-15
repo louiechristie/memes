@@ -500,26 +500,6 @@ const memes: Meme[] = [
     ],
   },
   {
-    url: "squeezed-apple",
-    title: "Squeezed Apple",
-    image: "https://img.youtube.com/vi/1s1uWo1_bzg/hqdefault.jpg",
-    width: 1280,
-    height: 720,
-    alt: "Tim Cook being asked an uncomfortable question in a political house hearing about why developers can only sell apps through the app store. Tim Looks like he's squeezing out a tough turd.",
-    youtube: {
-      v: "1s1uWo1_bzg",
-      start: 1 * 60 * 60 + 14 * 60 + 6,
-      end: 1 * 60 * 60 + 14 * 60 + 27,
-    },
-    caption: "Tim Cook squeezes one out",
-    footnotes: [
-      {
-        text: "Beavis",
-        link: "https://en.wikipedia.org/wiki/File:Beavis_BeavisandButtHead.png#/media/File:Beavis_BeavisandButtHead.png",
-      },
-    ],
-  },
-  {
     date: "2021-03-13T12:25:00.878Z",
     url: "good-news",
     title: "The world is actually getting better",
