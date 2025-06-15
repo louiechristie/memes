@@ -57,6 +57,10 @@ header {
   padding-top: 8px;
 }
 
+.icon-link::before, .icon-link::after {
+  content: " ";
+}
+
 .center {
   display: grid;
   align-items: center;

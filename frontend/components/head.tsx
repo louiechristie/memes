@@ -88,41 +88,42 @@ export default function Index(props: Props) {
         <div className="center">
           <nav>
             <ul className="icon-list">
-              <li>
+              <li className="icon-link">
                 <a href="https://weather.louiechristie.com/">
-                <img width="24" height="24" role="presentation" alt="Icon of weather" src="https://weather.louiechristie.com/favicon.ico?v=90abe0c9ee7e"></img></a>&nbsp;
+                <img width="24" height="24" style={{width: '24px', height: '24px'}} role="presentation" alt="Icon of weather" src="https://weather.louiechristie.com/favicon.ico?v=90abe0c9ee7e"></img></a>&nbsp;
                 <a href="https://weather.louiechristie.com/">Weather Winton</a>
               </li>
-              <li>
+              <li className="icon-link">
                 <span className="icon-emoji">
                   <a className="icon-link" href="/memes/">🙂</a>
                 </span>
-                <a href="/memes/">Memes</a>
+                <a href="/memes/" aria-current="page">Memes</a>
               </li>
-              <li>
+              <li className="icon-link">
                 <span className="align-middle icon-emoji">
                   <a className="icon-link" href="https://www.newcrossities.com/">🗺️</a>
                 </span>
                 <a href="https://www.newcrossities.com/">Quirky Travel Guide</a>
               </li>
               <li>
+                <a href="/trivia-trundle/" className="icon-link">
                 <svg className="align-middle" width="24" height="24" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="100%" height="100%" fill="rgb(0, 81, 231)"></rect>
                   <path transform="translate(0,10)" d=" M45.6459 107.884C41.7309 107.884 38.0229 106.321 35.6469 103.626L3.48989 67.2745C-0.695106 62.5544 0.393896 55.8322
                       5.9199 52.2517C11.4549 48.6558 19.3119 49.603 23.4969 54.3308L44.6559 78.2316L97.8549 5.14315C101.518 0.122749 109.258
                       -1.41725 115.144 1.71665C121.021 4.84285 122.83 11.4649 119.158 16.5007L56.3019 102.818C54.1239 105.828 50.3529 107.707
                       46.2219 107.869C46.0239 107.884 45.8439 107.884 45.6459 107.884Z" fill="white"></path>
-                </svg>&nbsp;
+                </svg>&nbsp;</a>
                 <a href="/trivia-trundle/">Trivia Trundle</a>
               </li>
               <li>
-                <a href="/weeks-to-go/">
+                <a className="icon-link" href="/weeks-to-go/">
                   <img className="align-middle" width="24" height="24" role="presentation" alt="Icon of a calendar" src="/weeks-to-go/favicon.ico?v=58d47258503a?v=90abe0c9ee7e"></img></a>
                   &nbsp;<a href="/weeks-to-go/">Weeks To Go
                   </a>
                 </li>
                 <li className="icon">
-                  <a href="https://www.reckona.co.uk/">
+                  <a className="icon-link" href="https://www.reckona.co.uk/">
                   <img loading="lazy" decoding="async" src="/tech/experiments/nN3GMo7oTH-24.webp" className="icon-image align-text-bottom" width="24" height="24" role="presentation" alt=""></img></a>&nbsp;
                   <a href="https://www.reckona.co.uk/">Reckona</a>
                 </li>
