@@ -163,7 +163,7 @@ const memes: Meme[] = [
     url: "pulling-the-plug",
     title: "Pulling the plug",
     image:
-      "http://www.louiechristie.com/memes/images/flooded-vr-stand-up-comedy.jpg",
+      "https://www.louiechristie.com/memes/images/flooded-vr-stand-up-comedy.jpg",
     width: 1280,
     height: 720,
     alt: "Stand up comedy club in virtual reality in a dark lounge with wooden walls",
