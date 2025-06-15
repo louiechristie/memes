@@ -118,7 +118,7 @@ export default function Index(props: Props) {
               </li>
               <li>
                 <a className="icon-link" href="/weeks-to-go/">
-                  <img className="align-middle" width="24" height="24" role="presentation" alt="Icon of a calendar" src="/weeks-to-go/favicon.ico?v=58d47258503a?v=90abe0c9ee7e"></img></a>
+                  <img className="align-middle" width="24" height="24" style={{width: '24px', height: '24px'}} role="presentation" alt="Icon of a calendar" src="/weeks-to-go/favicon.ico?v=58d47258503a?v=90abe0c9ee7e"></img></a>
                   &nbsp;<a href="/weeks-to-go/">Weeks To Go
                   </a>
                 </li>
