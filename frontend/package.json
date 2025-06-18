@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build && touch out/.nojekyll",
     "lint": "tsc -p . && next lint",
-    "deploy": "npm run build && rsync -avP ./out/ ~/Documents/louiechristie.github.io/_site/memes",
+    "deploy": "npm run build && rsync -avP ./out/ ~/Documents/louiechristie.github.io/_site/memes && cd ~/Documents/louiechristie.github.io/ && npm run deploy",
     "clean": "npx rimraf .next"
   },
   "dependencies": {
