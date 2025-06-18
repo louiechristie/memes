@@ -95,6 +95,26 @@ export const getLongTitle = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "purpose-not-pressure",
+    title: "Purpose Not Pressure (tech)",
+    image: "http://img.youtube.com/vi/Saaz6D1azlU/1.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Man giving a conference talk. Bald, plaid shirt, slightly overweight, old-ish, looks like a typical American programmer.",
+    youtube: {
+      index: 15,
+      v: "Saaz6D1azlU",
+      start: 55 * 60 + 22,
+      end: 57 * 60 + 12,
+    },
+    caption: [
+      `“ 'Could you just stay a couple of extra hours? Could you work a little harder?' is never going to achieve...`,
+      `Software design is a creative activity and creative activities need space.`,
+      `But they also need impetus, and leading with purpose instead of with pressure is what creates that combination.”`,
+      ` - Kent Beck, GOTO Conference, 2024`,
+    ],
+  },
+  {
     url: "how-to-bring-in-a-land-value-tax",
     title: "How To Bring In a Land Value Tax",
     image: "http://img.youtube.com/vi/hHR7KCa1WxE/1.jpg",
