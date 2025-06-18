@@ -151,7 +151,7 @@ const memes: Meme[] = [
     image: "http://img.youtube.com/vi/ecKgqJRvZ5M/2.jpg",
     width: 1280,
     height: 720,
-    alt: "Bald guy sat at a microphone in front of a wooden table in techy office with men's toys on shelves (tech mostly). He's sat in a video gaming chair.  In a room that is otherwise sparse and spacious with wooden floors",
+    alt: "Bald guy sat at a microphone in front of a wooden table in techie office with men's toys on shelves (tech mostly). He's sat in a video gaming chair.  In a room that is otherwise sparse and spacious with wooden floors",
     caption: `"He could go out and hire, because he's Apple, the best software coder in the world - but he'd rather hire a great software coder who also did stand-up comedy."  - Apple exec Andy Miller on Steve Jobs`,
     youtube: {
       v: "ecKgqJRvZ5M",
