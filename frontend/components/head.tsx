@@ -10,7 +10,7 @@ const h1 = "Meme";
 const definitionOfMeme =
   "... (Internet, slang) Something, usually humorous, which is copied and circulated online";
 const originStory =
-  "Originally I wanted to send friend a funny video clip that played properly in WhatsApp, and this site sort of spiralled from there.";
+  "Originally I wanted to send a friend a funny video clip that previewed properly in WhatsApp, and this site sort of spiralled from there.";
 
 const content = { h1, definitionOfMeme, originStory };
 const suffix = " | meme | louiechristie.com";
