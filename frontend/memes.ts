@@ -19,7 +19,7 @@ export type Meme = {
   alt: string;
   width: number;
   height: number;
-  caption?: string;
+  caption?: string | string[];
   cite?: string;
   youtube?: Youtube;
   customHTML?: boolean;

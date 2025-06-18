@@ -19,17 +19,40 @@ interface Props {
 }
 
 interface BoxProps {
-  caption?: string;
-  cite?: string;
+  caption?: Meme["caption"];
+  cite?: Meme["cite"];
+}
+
+function Blockquote(props: { caption: Meme["caption"] }): JSX.Element {
+  const { caption } = props;
+  if (typeof caption === "string") {
+    return (
+      <blockquote>
+        <p>{caption}</p>
+      </blockquote>
+    );
+  } else if (
+    Array.isArray(caption) &&
+    caption.every((item) => typeof item === "string")
+  ) {
+    return (
+      <blockquote>
+        {caption.map((captionString) => {
+          return <p key={captionString}>{captionString}</p>;
+        })}
+      </blockquote>
+    );
+  } else {
+    return <p>Invalid caption type</p>;
+    console.error("Invalid caption type");
+  }
 }
 
 function Box(props: BoxProps): JSX.Element {
   const { caption, cite } = props;
   return caption ? (
     <figcaption className="meme-fig-caption">
-      <blockquote>
-        <p>{caption}</p>
-      </blockquote>
+      <Blockquote caption={caption}></Blockquote>
       {cite && <cite> - {cite} </cite>}
     </figcaption>
   ) : (
