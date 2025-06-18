@@ -53,6 +53,7 @@ export default function Index(props: Props) {
           <div>
             <a href="/">
               <img
+                className="logo"
                 src="https://www.louiechristie.com/images/handwritten_louie_christie_600x220.jpg"
                 alt="handwritten Louie Christie"
               ></img>
