@@ -3,18 +3,22 @@ import { Meme } from "../memes";
 
 type Props =
   | Pick<Meme, "title" | "caption" | "image" | "url" | "alt"> & {
-      description: string;
+      description: string | undefined;
     };
 
+const h1 = "Meme";
+const definitionOfMeme =
+  "... (Internet, slang) Something, usually humorous, which is copied and circulated online";
+const originStory =
+  "Originally I wanted to send friend a funny video clip that played properly in WhatsApp, and this site sort of spiralled from there.";
+
+const content = { h1, definitionOfMeme, originStory };
+const suffix = " | meme | louiechristie.com";
+
+export { content };
+
 export default function Index(props: Props) {
-  const {
-    title = "memes | louiechristie.com",
-    description = "... (Internet, slang) Something, usually humorous, which is copied and circulated online with slight adaptations, including quizzes, basic pictures, video templates etc.",
-    image = "/images/lc-icon.svg",
-    url = "",
-    alt = "louiechristie.com icon, L C initials handwritten",
-    caption,
-  } = props;
+  const { title, description, image, url, alt, caption } = props;
 
   const siteUrl = "https://www.louiechristie.com/memes/";
   let pageDescription = "";
@@ -29,6 +33,8 @@ export default function Index(props: Props) {
   ) {
     pageDescription = caption.join(" ");
   }
+
+  pageDescription = pageDescription + suffix;
 
   return (
     <div>

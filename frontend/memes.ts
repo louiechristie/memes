@@ -97,7 +97,7 @@ const memes: Meme[] = [
   {
     url: "purpose-not-pressure",
     title: "Purpose Not Pressure (tech)",
-    image: "http://img.youtube.com/vi/Saaz6D1azlU/1.jpg",
+    image: "http://img.youtube.com/vi/Saaz6D1azlU/0.jpg",
     width: 1280,
     height: 720,
     alt: "Man giving a conference talk. Bald, plaid shirt, slightly overweight, old-ish, looks like a typical American programmer.",

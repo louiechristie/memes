@@ -57,7 +57,8 @@ header {
   padding-top: 8px;
 }
 
-.icon-link::before, .icon-link::after {
+.icon-link::before,
+.icon-link::after {
   content: " ";
 }
 
@@ -70,7 +71,7 @@ header {
 header img {
   width: 300px;
   height: auto;
-  border-radius: initial
+  border-radius: initial;
 }
 
 .headline-link {
@@ -78,12 +79,12 @@ header img {
 }
 
 .box-shadow,
+.site-description,
 blockquote,
 .cta,
 .headline {
   padding: 10px;
   margin: 10px;
-
   border: 3px solid var(--grey-color);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
@@ -202,14 +203,15 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.site-description {
+h6 {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: var(--heading-color);
   text-align: center;
 }
 
 .site-description {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: var(--heading-color);
   margin: 10px;
 }
 
@@ -219,11 +221,17 @@ h6,
   }
 }
 
-h1 {
+.site-description h1 {
   font-weight: bold;
   letter-spacing: 1px;
   margin-top: 0;
   word-break: break-word;
+}
+
+.site-description blockquote {
+  box-shadow: none;
+  border: none;
+  text-align: left;
 }
 
 @media all and (min-width: 490px) {
@@ -511,7 +519,8 @@ i > svg,
   align-items: center;
 }
 
-blockquote {
+blockquote,
+.site-description {
   max-width: 640px;
   line-height: 1.8em;
 }

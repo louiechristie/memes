@@ -119,15 +119,7 @@ export default function MemeDetail(props: Props) {
   } = meme;
 
   let longTitle = getLongTitle(meme);
-  let videoDescriptor = getVideoDescriptor(meme);
-  let description = "meme | louiechristie.com";
-
-  if (youtube) {
-    description = `${videoDescriptor} | ${description}`;
-  }
-  if (caption) {
-    description = `${caption} | ${description}`;
-  }
+  let description;
 
   /* https://github.com/vercel/next.js/issues/19527 */
 
@@ -197,6 +189,7 @@ export default function MemeDetail(props: Props) {
       <Head
         title={longTitle}
         description={description}
+        caption={caption}
         image={image}
         alt={alt}
         url={url}

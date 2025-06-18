@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { GetStaticProps } from "next";
-import Head from "../components/head";
+import Head, { content } from "../components/head";
 import Footer from "../components/footer";
 
 import memes, { Meme, getLongTitle } from "../memes";
+
+const { h1, definitionOfMeme, originStory } = content;
 
 export const getStaticProps: GetStaticProps = async () => {
   const items: Meme[] = memes;
@@ -25,7 +27,6 @@ export default function Index(props: Props) {
     <>
       <Head
         title="Memes | louiechristie.com"
-        description="'... (Internet, slang) Something, usually humorous, which is copied and circulated online with slight adaptations, including quizzes, basic pictures, video templates etc. - Wiktionary'"
         image={
           memes.find((item) => item.url === "valuable-lesson")?.image ||
           "/images/lc-icon.svg"
@@ -35,25 +36,30 @@ export default function Index(props: Props) {
           "louiechristie.com icon, L C initials handwritten"
         }
         url={""}
+        description={Object.values(content).join(" ")}
       />
 
       <div className="memes-container">
-        <blockquote
-          className="meme-definition"
-          cite="https://en.wiktionary.org/wiki/meme">
-          <p>
-            <strong>Meme</strong> ... (Internet, slang) Something, usually
-            humorous, which is copied and circulated online with slight
-            adaptations, including quizzes, basic pictures, video templates etc.
-          </p>
-          <cite>- Wiktionary, 2020</cite>
-        </blockquote>
+        <div className="site-description">
+          <blockquote
+            className="meme-definition"
+            cite="https://en.wiktionary.org/wiki/meme"
+          >
+            <p>
+              <strong>{h1}</strong> {definitionOfMeme}
+            </p>
+            <cite>- Wiktionary, 2020</cite>
+          </blockquote>
+
+          <p className="intro">{originStory}</p>
+        </div>
 
         <ul className="memes-list">
           {memes.map((item) => (
             <Link
               key={item.url}
-              href={`${process.env.ASSET_PREFIX}/${item.url}/`}>
+              href={`${process.env.ASSET_PREFIX}/${item.url}/`}
+            >
               <li className="box-shadow">
                 <img
                   src={item.image}
