@@ -232,6 +232,7 @@ const memes: Meme[] = [
       start: 60,
       end: 1 * 60 + 24,
     },
+    caption: "After this video was made the British Comedy Awards were axed.",
     footnotes: [
       {
         text: "The origin story of 'Underground Comedy'",
