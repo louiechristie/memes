@@ -420,7 +420,7 @@ const memes: Meme[] = [
     width: 1280,
     height: 720,
     alt: "Dan Abramov on Zoom call with another geeky looking guy",
-    caption: `"I wouldn't" according to the creator of Redux. (But it's nuanced, and that was before Redux Toolkit)`,
+    caption: `"I wouldn't" according to the creator of Redux. (But it's nuanced [2])"`,
     youtube: {
       v: "XEt09iK8IXs",
       start: 5 * 60 + 32,
@@ -430,6 +430,10 @@ const memes: Meme[] = [
       {
         text: "Redux was actually about time travel",
         link: "https://www.louiechristie.com/memes/redux-was-actually-about-time-travel/",
+      },
+      {
+        text: `"Redux isn't the right tool for every app, but it is still the most widely used state management lib with React apps, has excellent documentation, and provides a lot of features to help you build apps with a consistent and predictable structure." Redux Toolkit documentation accessed 2025-07-21`,
+        link: "https://redux.js.org/understanding/history-and-design/history-of-redux#2019-redux-toolkit",
       },
     ],
   },
