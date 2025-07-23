@@ -288,7 +288,7 @@ const memes: Meme[] = [
     height: 720,
     alt: "Title: React.js Documentary by HoneyPot, over blue tinted images of computer geeks like Dan Abromov (white, male, young)",
     caption:
-      "According to the React.js Documentary, to understand Redux You really need to understand  Bret Viktor's time travel.",
+      "According to the React.js Documentary, to understand Redux You really need to understand  Bret Victor's time travel.",
     youtube: {
       v: "8pDqJVdNa44",
       start: 1 * 60 * 60 + 7 * 60 + 51,
