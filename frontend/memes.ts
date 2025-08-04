@@ -191,7 +191,7 @@ const memes: Meme[] = [
       "So the good thing about doing stand-up comedy on a pirate ship in virtual reality at 3am, \n\n\n is when you get heckled by a drunk guy, you can pull the plug and flood the room.",
     youtube: {
       v: "Jto3m5-SZv0",
-      start: 48 * 60 + 49,
+      start: 47 * 60 + 15,
       end: 3011,
     },
     footnotes: [
