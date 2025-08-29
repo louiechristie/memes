@@ -142,8 +142,8 @@ export default function Index(props: Props) {
                     height="24"
                     style={{ width: "24px", height: "24px" }}
                     role="presentation"
-                    alt="Icon of weather"
-                    src="https://weather.louiechristie.com/favicon.ico?v=90abe0c9ee7e"
+                    alt="Weather icon"
+                    src="https://weather.louiechristie.com/images/warm/12/favicon.ico"
                   ></img>
                 </a>
                 &nbsp;
