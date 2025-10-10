@@ -438,8 +438,8 @@ const memes: Meme[] = [
     ],
   },
   {
-    url: "truly-agile-development",
-    title: "Truly agile development",
+    url: "actually-agile-development",
+    title: "Actually agile development",
     image: "http://img.youtube.com/vi/LWGJA9i18Co/maxresdefault.jpg",
     width: 1280,
     height: 720,
