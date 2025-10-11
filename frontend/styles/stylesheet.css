@@ -463,10 +463,6 @@ i > svg,
   }
 }
 
-.meme-definition {
-  margin-bottom: 30px;
-}
-
 .memes-list {
   margin: 0;
   padding: 0;
@@ -519,10 +515,24 @@ i > svg,
   align-items: center;
 }
 
-blockquote,
-.site-description {
+blockquote {
   max-width: 640px;
   line-height: 1.8em;
+}
+
+.meme-definition blockquote {
+  margin: 0;
+}
+
+.site-description,
+.meme-definition {
+  line-height: 1.2em;
+  font-size: 1em;
+  margin: 0 10px 30px 10px;
+}
+
+.site-description {
+  margin-top: 30px;
 }
 
 @media all and (min-width: 490px) {

@@ -40,18 +40,12 @@ export default function Index(props: Props) {
       />
 
       <div className="memes-container">
-        <div className="site-description">
-          <blockquote
-            className="meme-definition"
-            cite="https://en.wiktionary.org/wiki/meme"
-          >
-            <p>
-              <strong>{h1}</strong> {definitionOfMeme}
-            </p>
-            <cite>- Wiktionary, 2020</cite>
+        <div className="meme-definition">
+          <blockquote cite="https://en.wiktionary.org/wiki/meme">
+            <h1>{h1}</h1>
+            <p>&ldquo;{definitionOfMeme}&rdquo;</p>
+            <cite>- Wiktionary, 2025</cite>
           </blockquote>
-
-          <p className="intro">{originStory}</p>
         </div>
 
         <ul className="memes-list">
@@ -73,6 +67,18 @@ export default function Index(props: Props) {
             </Link>
           ))}
         </ul>
+
+        <div className="site-description">
+          <blockquote
+            className="intro"
+            cite="https://en.wiktionary.org/wiki/meme"
+          >
+            <p>
+              <strong>Originally</strong>: &ldquo;{originStory}&rdquo;
+            </p>
+            <cite>- Louie Christie</cite>
+          </blockquote>
+        </div>
       </div>
 
       <Footer />

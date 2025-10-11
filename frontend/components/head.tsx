@@ -8,9 +8,9 @@ type Props =
 
 const h1 = "Meme";
 const definitionOfMeme =
-  "... (Internet, slang) Something, usually humorous, which is copied and circulated online";
+  "... (Internet) Media, usually humorous, which is copied and circulated online with slight adaptations, such as basic pictures, video templates, etc.";
 const originStory =
-  "Originally I wanted to send a friend a funny video clip that previewed properly in WhatsApp, and this site sort of spiralled from there.";
+  "I wanted to send a friend a funny video clip on WhatsApp with a decent preview image. This website sort of spiralled from there.";
 
 const content = { h1, definitionOfMeme, originStory };
 const suffix = " | meme | louiechristie.com";
