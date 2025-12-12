@@ -1,9 +1,10 @@
-import { Footnote, Youtube } from "../memes";
+import { Youtube } from "../memes";
 import Box from "./box";
 import limit from "../utilities/limit";
 import Head from "./head";
 import Footer from "./footer";
 import AlsoSee from "./alsoSee";
+import Footnotes from "./footnotes";
 
 interface Props {
   meme: Youtube;
@@ -83,26 +84,7 @@ const YouTube = (props: Props) => {
 
       {alsoSee && <AlsoSee alsoSee={alsoSee}></AlsoSee>}
 
-      {footnotes && (
-        <section className="footnotes-container">
-          <h5>Footnotes</h5>
-          <ol className="footnotes">
-            {footnotes.map((footnote: Footnote, index: number) => {
-              const number = index + 1;
-              return (
-                <li className="footnote" key={footnote.text || index}>
-                  {footnote.text || null}&nbsp;
-                  {footnote.link && (
-                    <a className="ref" href={footnote.link || undefined}>
-                      [{number}]
-                    </a>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
-        </section>
-      )}
+      {footnotes && <Footnotes footnotes={footnotes}></Footnotes>}
 
       <Footer />
     </>

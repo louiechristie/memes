@@ -10,6 +10,7 @@ import MemeList from "../../components/memeList";
 import YouTube from "../../components/youTube";
 import Box from "../../components/box";
 import AlsoSee from "../../components/alsoSee";
+import Footnotes from "../../components/footnotes";
 import TimeManagement from "../../components/time-management";
 import RemoteWorking from "../../components/remote-working";
 import BorisJohnsonsWorkExperience from "../../components/boris-johnsons-work-experience";
@@ -142,26 +143,7 @@ const MemeDetail = withErrorBoundary(
 
         {alsoSee && <AlsoSee alsoSee={alsoSee}></AlsoSee>}
 
-        {footnotes && (
-          <section className="footnotes-container">
-            <h5>Footnotes</h5>
-            <ol className="footnotes">
-              {footnotes.map((footnote: Footnote, index: number) => {
-                const number = index + 1;
-                return (
-                  <li className="footnote" key={footnote.text || index}>
-                    {footnote.text || null}&nbsp;
-                    {footnote.link && (
-                      <a className="ref" href={footnote.link || undefined}>
-                        [{number}]
-                      </a>
-                    )}
-                  </li>
-                );
-              })}
-            </ol>
-          </section>
-        )}
+        {footnotes && <Footnotes footnotes={footnotes}></Footnotes>}
 
         <Footer />
       </>
