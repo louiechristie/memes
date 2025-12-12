@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { GetStaticProps } from "next";
+import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
+
 import Head, { content } from "../components/head";
 import Footer from "../components/footer";
 
@@ -20,8 +22,22 @@ interface Props {
   memes: Meme[];
 }
 
-export default function Index(props: Props) {
+export default withErrorBoundary((props: Props) => {
   const memes = props.memes.filter((item) => !item.unlisted);
+
+  const [error, resetError] = useErrorBoundary(
+    // You can optionally log the error to an error reporting service
+    (error, errorInfo) => console.log(error, errorInfo)
+  );
+
+  if (error) {
+    return (
+      <div>
+        <p>{JSON.stringify(error)}</p>
+        <button onClick={resetError}>Try again</button>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -84,4 +100,4 @@ export default function Index(props: Props) {
       <Footer />
     </>
   );
-}
+});
