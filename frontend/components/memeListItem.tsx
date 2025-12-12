@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 
-import { Meme, getLongTitle } from "../memes";
+import { Meme, isYoutube, getVideoDescriptor } from "../memes";
 
 interface Props {
   meme: Meme;
@@ -35,7 +35,8 @@ const MemeListItem = withErrorBoundary((props: Props) => {
             height={meme.height}
             loading="lazy"
           />
-          <h2>{getLongTitle(meme)}</h2>
+          {isYoutube(meme) && <h2>{getVideoDescriptor(meme)}</h2>}
+          {!isYoutube(meme) && <h2>{meme.title}</h2>}
         </li>
       </Link>
     </div>

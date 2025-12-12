@@ -15,9 +15,6 @@ type Core = {
   caption?: string | string[];
   cite?: string;
   customHTML?: boolean;
-  bbc?: {
-    link: string;
-  };
   alsoSee?: Item[];
   footnotes?: Footnote[];
   unlisted?: boolean;
@@ -46,21 +43,21 @@ export type Footnote = {
 
 export type Meme = Core | Youtube;
 
+export const isYoutube = (meme: Meme) => {
+  let isYoutube = false;
+  if ("youtube" in meme) {
+    isYoutube = true;
+    meme = meme as Youtube;
+  }
+  return isYoutube;
+};
+
 export const getVideoDescriptor = (meme: Meme): string => {
   const { title } = meme;
 
   let descriptor = `${title} [2 mins video]`;
 
   return descriptor;
-};
-
-export const getLongTitle = (meme: Meme) => {
-  const { title, bbc } = meme;
-
-  if (bbc) {
-    return `${title} [2 mins video]`;
-  }
-  return title;
 };
 
 const memes: Meme[] = [

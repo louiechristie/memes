@@ -2,7 +2,7 @@ import * as React from "react";
 import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
-import memes, { Meme, getLongTitle, Footnote, Youtube } from "../../memes";
+import memes, { Meme, Footnote, Youtube, isYoutube } from "../../memes";
 
 import Head from "../../components/head";
 import Footer from "../../components/footer";
@@ -14,6 +14,8 @@ import Footnotes from "../../components/footnotes";
 import TimeManagement from "../../components/time-management";
 import RemoteWorking from "../../components/remote-working";
 import BorisJohnsonsWorkExperience from "../../components/boris-johnsons-work-experience";
+
+import limit from "../../utilities/limit";
 
 const MemeDetail = withErrorBoundary(
   (props: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -56,19 +58,10 @@ const MemeDetail = withErrorBoundary(
       caption,
       cite,
       customHTML,
-      bbc,
       alsoSee,
       footnotes,
     } = meme;
 
-    let isYoutube = false;
-
-    if ("youtube" in meme) {
-      isYoutube = true;
-      meme = meme as Youtube;
-    }
-
-    let longTitle = getLongTitle(meme);
     let description;
 
     if (customHTML && url === "boris-johnsons-work-experience")
@@ -81,20 +74,16 @@ const MemeDetail = withErrorBoundary(
       );
 
     if (customHTML && url === "remote-working")
-      return (
-        <RemoteWorking title={longTitle} image={image} alt={alt} url={url} />
-      );
+      return <RemoteWorking title={title} image={image} alt={alt} url={url} />;
     if (customHTML && url === "time-management")
-      return (
-        <TimeManagement title={longTitle} image={image} alt={alt} url={url} />
-      );
+      return <TimeManagement title={title} image={image} alt={alt} url={url} />;
 
-    if (isYoutube) return <YouTube meme={meme as Youtube} />;
+    if (isYoutube(meme)) return <YouTube meme={meme as Youtube} />;
 
     return (
       <>
         <Head
-          title={longTitle}
+          title={title}
           description={description}
           caption={caption}
           image={image}
@@ -103,41 +92,23 @@ const MemeDetail = withErrorBoundary(
         />
 
         <div className="meme-container">
-          <h1 className="meme-title">{getLongTitle(meme)}</h1>
+          <h1 className="meme-title">{title}</h1>
 
           <div className="meme-inner">
-            {!bbc && (
-              <figure className="meme-fig">
-                <img
-                  src={image}
-                  alt={alt}
-                  width={width}
-                  height={height}
-                  loading="lazy"
-                />
-                {caption && (
-                  <figcaption className="meme-fig-caption">
-                    <blockquote>{caption}</blockquote>
-                  </figcaption>
-                )}
-              </figure>
-            )}
-
-            {bbc && (
-              <figure className="meme-fig">
-                <a href={bbc.link}>
-                  <img
-                    src={image}
-                    alt={alt}
-                    width={width}
-                    height={height}
-                    loading="lazy"
-                  />
-                  <p>Watch video</p>
-                </a>
-                <Box caption={caption} cite={cite} />
-              </figure>
-            )}
+            <figure className="meme-fig">
+              <img
+                src={image}
+                alt={alt}
+                width={width}
+                height={height}
+                loading="lazy"
+              />
+              {caption && (
+                <figcaption className="meme-fig-caption">
+                  <blockquote>{caption}</blockquote>
+                </figcaption>
+              )}
+            </figure>
           </div>
         </div>
 
