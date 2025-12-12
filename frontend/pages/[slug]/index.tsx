@@ -8,39 +8,10 @@ import Head from "../../components/head";
 import Footer from "../../components/footer";
 import MemeList from "../../components/memeList";
 import Box from "../../components/box";
+import AlsoSee from "../../components/alsoSee";
 import TimeManagement from "../../components/time-management";
 import RemoteWorking from "../../components/remote-working";
 import BorisJohnsonsWorkExperience from "../../components/boris-johnsons-work-experience";
-
-interface AlsoSeeProps {
-  alsoSee: Item[];
-}
-
-function AlsoSee(props: AlsoSeeProps) {
-  const { alsoSee } = props;
-
-  return (
-    alsoSee && (
-      <section className="also-see-container">
-        <h2>Also see</h2>
-        <ol>
-          {alsoSee.map((item: Item, index: number) => {
-            const number = index + 1;
-            return (
-              <li className="also-see" key={item.text || index}>
-                {item.link && (
-                  <a className="ref" href={item.link || undefined}>
-                    {item.text}
-                  </a>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      </section>
-    )
-  );
-}
 
 const MemeDetail = withErrorBoundary(
   (props: InferGetStaticPropsType<typeof getStaticProps>) => {
