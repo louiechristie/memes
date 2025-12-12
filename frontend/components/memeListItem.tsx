@@ -25,18 +25,20 @@ const MemeListItem = withErrorBoundary((props: Props) => {
   }
 
   return (
-    <Link key={meme.url} href={`${process.env.ASSET_PREFIX}/${meme.url}/`}>
-      <li className="box-shadow">
-        <img
-          src={meme.image}
-          alt={meme.alt}
-          width={meme.width}
-          height={meme.height}
-          loading="lazy"
-        />
-        <h2>{getLongTitle(meme)}</h2>
-      </li>
-    </Link>
+    <div key={meme?.url}>
+      <Link href={`${process.env.ASSET_PREFIX}/${meme?.url}/`}>
+        <li className="box-shadow">
+          <img
+            src={meme.image}
+            alt={meme.alt}
+            width={meme.width}
+            height={meme.height}
+            loading="lazy"
+          />
+          <h2>{getLongTitle(meme)}</h2>
+        </li>
+      </Link>
+    </div>
   );
 });
 

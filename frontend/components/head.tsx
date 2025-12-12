@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
+
 import { Meme } from "../memes";
 
 type Props =
@@ -17,7 +19,29 @@ const suffix = " | meme | louiechristie.com";
 
 export { content };
 
-export default function Index(props: Props) {
+export default withErrorBoundary((props: Props) => {
+  const [error, resetError] = useErrorBoundary(
+    // You can optionally log the error to an error reporting service
+    (error, errorInfo) => console.log(error, errorInfo)
+  );
+
+  if (error) {
+    return (
+      <div>
+        <p>{JSON.stringify(error)}</p>
+        <button onClick={resetError}>Try again</button>
+      </div>
+    );
+  }
+
+  if (!props) {
+    return (
+      <div>
+        <p>Error, missing header properties</p>
+      </div>
+    );
+  }
+
   const { title, description, image, url, alt, caption } = props;
 
   const siteUrl = "https://www.louiechristie.com/memes/";
@@ -240,4 +264,4 @@ export default function Index(props: Props) {
       </header>
     </div>
   );
-}
+});

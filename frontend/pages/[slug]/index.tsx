@@ -1,6 +1,7 @@
 import * as React from "react";
-import Head from "../../components/head";
-import Footer from "../../components/footer";
+import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+
 import memes, {
   Meme,
   Item,
@@ -8,15 +9,13 @@ import memes, {
   getVideoDescriptor,
   Footnote,
 } from "../../memes";
-import { GetStaticPaths, GetStaticProps } from "next";
+
+import Head from "../../components/head";
+import Footer from "../../components/footer";
+import MemeList from "../../components/memeList";
 import TimeManagement from "../../components/time-management";
 import RemoteWorking from "../../components/remote-working";
 import BorisJohnsonsWorkExperience from "../../components/boris-johnsons-work-experience";
-
-interface Props {
-  meme: Meme;
-  errors: string;
-}
 
 interface BoxProps {
   caption?: Meme["caption"];
@@ -89,150 +88,137 @@ function AlsoSee(props: AlsoSeeProps) {
   );
 }
 
-export default function MemeDetail(props: Props) {
-  const { errors, meme } = props;
-
-  if (errors) {
-    return (
-      <div title="Error">
-        <p>
-          <span style={{ color: "red" }}>Error:</span> {errors}
-        </p>
-      </div>
+const MemeDetail = withErrorBoundary(
+  (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+    const [error, resetError] = useErrorBoundary(
+      // You can optionally log the error to an error reporting service
+      (error, errorInfo) =>
+        console.log(
+          "MemeDetail Error: ",
+          error,
+          "MemeDetail error Info: ",
+          errorInfo
+        )
     );
-  }
 
-  const {
-    url,
-    title,
-    image,
-    width,
-    height,
-    alt,
-    caption,
-    cite,
-    youtube,
-    customHTML,
-    bbc,
-    alsoSee,
-    footnotes,
-  } = meme;
-
-  let longTitle = getLongTitle(meme);
-  let description;
-
-  /* https://github.com/vercel/next.js/issues/19527 */
-
-  if (customHTML && url === "boris-johnsons-work-experience")
-    return (
-      <div>
-        <Head
-          title={"Is it just me? Or does Boris Johnson..."}
-          description={
-            "... increasingly look like he's doing a lot of work experience in case he loses his job?"
-          }
-          image={image}
-          url={url}
-          alt=""
-        />
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div style={{ maxWidth: 960 }}>
-            <h1>{title}</h1>
-
-            <BorisJohnsonsWorkExperience />
-          </div>
+    if (error) {
+      // @ts-ignore
+      const errorMessage: string = error.message;
+      return (
+        <div>
+          <p>{errorMessage}</p>
+          <button onClick={resetError}>Try again</button>
         </div>
-        <Footer />
-      </div>
-    );
+      );
+    }
 
-  if (customHTML && url === "remote-working")
+    if (!props.meme) {
+      // Needed for production build (but not local build, that uses the index file)
+      return <MemeList memes={memes} />;
+    }
+
+    const { meme } = props;
+
+    const {
+      url,
+      title,
+      image,
+      width,
+      height,
+      alt,
+      caption,
+      cite,
+      youtube,
+      customHTML,
+      bbc,
+      alsoSee,
+      footnotes,
+    } = meme;
+
+    let longTitle = getLongTitle(meme);
+    let description;
+
+    /* https://github.com/vercel/next.js/issues/19527 */
+
+    if (customHTML && url === "boris-johnsons-work-experience")
+      return (
+        <div>
+          <Head
+            title={"Is it just me? Or does Boris Johnson..."}
+            description={
+              "... increasingly look like he's doing a lot of work experience in case he loses his job?"
+            }
+            image={image}
+            url={url}
+            alt=""
+            caption=""
+          />
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ maxWidth: 960 }}>
+              <h1>{title}</h1>
+
+              <BorisJohnsonsWorkExperience />
+            </div>
+          </div>
+          <Footer />
+        </div>
+      );
+
+    if (customHTML && url === "remote-working")
+      return (
+        <>
+          <Head
+            title={longTitle}
+            description={description}
+            image={image}
+            alt={alt}
+            url={url}
+          />
+
+          <h1>{title}</h1>
+
+          <RemoteWorking />
+
+          <Footer />
+        </>
+      );
+
+    if (customHTML && url === "time-management")
+      return (
+        <>
+          <Head
+            title={longTitle}
+            description={description}
+            image={image}
+            alt={alt}
+            url={url}
+          />
+
+          <h1>{title}</h1>
+
+          <TimeManagement />
+
+          <Footer />
+        </>
+      );
+
     return (
       <>
         <Head
           title={longTitle}
           description={description}
+          caption={caption}
           image={image}
           alt={alt}
           url={url}
         />
 
-        <h1>{title}</h1>
+        <div className="meme-container">
+          <h1 className="meme-title">{getLongTitle(meme)}</h1>
 
-        <RemoteWorking />
-
-        <Footer />
-      </>
-    );
-
-  if (customHTML && url === "time-management")
-    return (
-      <>
-        <Head
-          title={longTitle}
-          description={description}
-          image={image}
-          alt={alt}
-          url={url}
-        />
-
-        <h1>{title}</h1>
-
-        <TimeManagement />
-
-        <Footer />
-      </>
-    );
-
-  return (
-    <>
-      <Head
-        title={longTitle}
-        description={description}
-        caption={caption}
-        image={image}
-        alt={alt}
-        url={url}
-      />
-
-      <div className="meme-container">
-        <h1 className="meme-title">{getLongTitle(meme)}</h1>
-
-        <div className="meme-inner">
-          {!youtube && !bbc && (
-            <figure className="meme-fig">
-              <img
-                src={image}
-                alt={alt}
-                width={width}
-                height={height}
-                loading="lazy"
-              />
-              {caption && (
-                <figcaption className="meme-fig-caption">
-                  <blockquote>{caption}</blockquote>
-                </figcaption>
-              )}
-            </figure>
-          )}
-
-          {youtube && (
-            <figure className="youtube">
-              <div className="iframe-container">
-                <iframe
-                  src={`https://www.youtube.com/embed/${youtube.v}?${youtube.list && `list=${youtube.list}`}${youtube.index && `&index=${youtube.index}`}&start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} // prettier-ignore
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
-              </div>
-
-              <Box caption={caption} cite={cite} />
-            </figure>
-          )}
-
-          {bbc && (
-            <figure className="meme-fig">
-              <a href={bbc.link}>
+          <div className="meme-inner">
+            {!youtube && !bbc && (
+              <figure className="meme-fig">
                 <img
                   src={image}
                   alt={alt}
@@ -240,60 +226,100 @@ export default function MemeDetail(props: Props) {
                   height={height}
                   loading="lazy"
                 />
-                <p>Watch video</p>
-              </a>
-              <Box caption={caption} cite={cite} />
-            </figure>
-          )}
+                {caption && (
+                  <figcaption className="meme-fig-caption">
+                    <blockquote>{caption}</blockquote>
+                  </figcaption>
+                )}
+              </figure>
+            )}
+
+            {youtube && (
+              <figure className="youtube">
+                <div className="iframe-container">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${youtube.v}?${youtube.list && `list=${youtube.list}`}${youtube.index && `&index=${youtube.index}`}&start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} // prettier-ignore
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+
+                <Box caption={caption} cite={cite} />
+              </figure>
+            )}
+
+            {bbc && (
+              <figure className="meme-fig">
+                <a href={bbc.link}>
+                  <img
+                    src={image}
+                    alt={alt}
+                    width={width}
+                    height={height}
+                    loading="lazy"
+                  />
+                  <p>Watch video</p>
+                </a>
+                <Box caption={caption} cite={cite} />
+              </figure>
+            )}
+          </div>
         </div>
-      </div>
 
-      {alsoSee && <AlsoSee alsoSee={alsoSee}></AlsoSee>}
+        {alsoSee && <AlsoSee alsoSee={alsoSee}></AlsoSee>}
 
-      {footnotes && (
-        <section className="footnotes-container">
-          <h5>Footnotes</h5>
-          <ol className="footnotes">
-            {footnotes.map((footnote: Footnote, index: number) => {
-              const number = index + 1;
-              return (
-                <li className="footnote" key={footnote.text || index}>
-                  {footnote.text || null}&nbsp;
-                  {footnote.link && (
-                    <a className="ref" href={footnote.link || undefined}>
-                      [{number}]
-                    </a>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
-        </section>
-      )}
+        {footnotes && (
+          <section className="footnotes-container">
+            <h5>Footnotes</h5>
+            <ol className="footnotes">
+              {footnotes.map((footnote: Footnote, index: number) => {
+                const number = index + 1;
+                return (
+                  <li className="footnote" key={footnote.text || index}>
+                    {footnote.text || null}&nbsp;
+                    {footnote.link && (
+                      <a className="ref" href={footnote.link || undefined}>
+                        [{number}]
+                      </a>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+          </section>
+        )}
 
-      <Footer />
-    </>
-  );
-}
+        <Footer />
+      </>
+    );
+  }
+);
+
+export default MemeDetail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const paths = memes.map((meme) => ({
-    params: { slug: meme.url },
-  }));
+  const paths = memes.map((meme) => {
+    return {
+      params: { slug: meme.url },
+    };
+  });
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
   return { paths, fallback: false };
 };
 
-// This function gets called at build time on server-side.
-// It won't be called on client-side, so you can even do
-// direct database queries.
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps = (async ({ params }) => {
   const slug = params?.slug;
+
   const meme = memes.find((meme) => meme.url === slug);
-  // By returning { props: item }, the StaticPropsDetail component
-  // will receive `item` as a prop at build time
-  return { props: { meme } };
-};
+
+  if (meme) {
+    return { props: { meme } };
+  } else {
+    return { props: { meme: memes[0] } };
+  }
+}) satisfies GetStaticProps<{
+  meme: Meme;
+}>;
