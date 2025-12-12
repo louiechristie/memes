@@ -1,3 +1,6 @@
+import Head from "./head";
+import Footer from "./footer";
+
 const images = [
   {
     title: "Police man",
@@ -53,44 +56,79 @@ const images = [
   },
 ];
 
-export default function BorisJohnsonsWorkExperience() {
+interface Props {
+  title: string;
+  mainImage: string;
+  slug: string;
+}
+
+export default function BorisJohnsonsWorkExperience(props: Props) {
+  const { title, mainImage, slug } = props;
   return (
-    <div style={{ padding: 10 }}>
-      <main className="page-container">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "auto auto auto",
-            columnGap: 20,
-          }}>
-          {images.map((image) => (
-            <figure key={image.url}>
-              <img src={image.url} style={{ width: "100%" }} alt={image.alt} />
-              <figcaption>
-                <p>{image.title}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+    <div>
+      <Head
+        title={"Is it just me? Or does Boris Johnson..."}
+        description={
+          "... increasingly look like he's doing a lot of work experience in case he loses his job?"
+        }
+        image={mainImage}
+        url={slug}
+        alt=""
+        caption=""
+      />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ maxWidth: 960 }}>
+          <h1>{title}</h1>
 
-        <p
-          style={{
-            textAlign: "center",
-            fontWeight: "bold",
-            fontSize: "2rem",
-            marginBottom: "5rem",
-          }}>
-          <strong>He should try being professional politician next.</strong>
-        </p>
+          <div style={{ padding: 10 }}>
+            <main className="page-container">
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "auto auto auto",
+                  columnGap: 20,
+                }}
+              >
+                {images.map((image) => (
+                  <figure key={image.url}>
+                    <img
+                      src={image.url}
+                      style={{ width: "100%" }}
+                      alt={image.alt}
+                    />
+                    <figcaption>
+                      <p>{image.title}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
 
-        <div style={{ textAlign: "right" }}>
-          <a
-            style={{ textDecoration: "none" }}
-            href="https://comedy.louiechristie.com/gonzo/">
-            😬
-          </a>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  fontSize: "2rem",
+                  marginBottom: "5rem",
+                }}
+              >
+                <strong>
+                  He should try being professional politician next.
+                </strong>
+              </p>
+
+              <div style={{ textAlign: "right" }}>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="https://comedy.louiechristie.com/gonzo/"
+                >
+                  😬
+                </a>
+              </div>
+            </main>
+          </div>
         </div>
-      </main>
+      </div>
+      <Footer />
     </div>
   );
 }

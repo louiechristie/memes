@@ -1,4 +1,30 @@
-export default function x() {
+import Head from "./head";
+import Footer from "./footer";
+
+interface Props {
+  title: string;
+  image: string;
+  alt: string;
+  url: string;
+}
+
+export default function TimeManagement(props: Props) {
+  const { title, image, alt, url } = props;
+
+  return (
+    <>
+      <Head title={title} image={image} alt={alt} url={url} />
+
+      <h1>{title}</h1>
+
+      <Main />
+
+      <Footer />
+    </>
+  );
+}
+
+const Main = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <div className="time-management">
@@ -13,7 +39,8 @@ export default function x() {
               src="https://www.youtube.com/embed/10zNZD8tIKY?start=591&amp;end=621&amp;rel=0"
               frameBorder={0}
               allow="autoplay; encrypted-media"
-              allowFullScreen></iframe>
+              allowFullScreen
+            ></iframe>
           </div>
 
           <figcaption>
@@ -47,7 +74,8 @@ export default function x() {
             marginRight: 0,
             paddingLeft: 30,
             paddingRight: 30,
-          }}>
+          }}
+        >
           <p>
             <strong>Warning ⚠️</strong>: Tony Robbins does not have all the
             answers, a lot of self-help is bollocks. (A guy a knew spent a lot
@@ -100,7 +128,8 @@ export default function x() {
         <div style={{ margin: "2em" }}>
           <a
             className="link-box"
-            href="https://www.nhs.uk/conditions/stress-anxiety-depression/feel-better-and-happy/">
+            href="https://www.nhs.uk/conditions/stress-anxiety-depression/feel-better-and-happy/"
+          >
             <aside className="box-shadow column" style={{ margin: "0 auto" }}>
               <figure>
                 6 NHS tips to help you be happier:
@@ -188,4 +217,4 @@ export default function x() {
       </div>
     </div>
   );
-}
+};

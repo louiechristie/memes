@@ -2,13 +2,7 @@ import * as React from "react";
 import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
-import memes, {
-  Meme,
-  Item,
-  getLongTitle,
-  getVideoDescriptor,
-  Footnote,
-} from "../../memes";
+import memes, { Meme, Item, getLongTitle, Footnote } from "../../memes";
 
 import Head from "../../components/head";
 import Footer from "../../components/footer";
@@ -142,64 +136,20 @@ const MemeDetail = withErrorBoundary(
 
     if (customHTML && url === "boris-johnsons-work-experience")
       return (
-        <div>
-          <Head
-            title={"Is it just me? Or does Boris Johnson..."}
-            description={
-              "... increasingly look like he's doing a lot of work experience in case he loses his job?"
-            }
-            image={image}
-            url={url}
-            alt=""
-            caption=""
-          />
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div style={{ maxWidth: 960 }}>
-              <h1>{title}</h1>
-
-              <BorisJohnsonsWorkExperience />
-            </div>
-          </div>
-          <Footer />
-        </div>
+        <BorisJohnsonsWorkExperience
+          title={title}
+          mainImage={image}
+          slug={url}
+        />
       );
 
     if (customHTML && url === "remote-working")
       return (
-        <>
-          <Head
-            title={longTitle}
-            description={description}
-            image={image}
-            alt={alt}
-            url={url}
-          />
-
-          <h1>{title}</h1>
-
-          <RemoteWorking />
-
-          <Footer />
-        </>
+        <RemoteWorking title={longTitle} image={image} alt={alt} url={url} />
       );
-
     if (customHTML && url === "time-management")
       return (
-        <>
-          <Head
-            title={longTitle}
-            description={description}
-            image={image}
-            alt={alt}
-            url={url}
-          />
-
-          <h1>{title}</h1>
-
-          <TimeManagement />
-
-          <Footer />
-        </>
+        <TimeManagement title={longTitle} image={image} alt={alt} url={url} />
       );
 
     return (

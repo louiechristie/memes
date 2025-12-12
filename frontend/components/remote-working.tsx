@@ -1,10 +1,41 @@
-export default function RemoteWorking() {
+import Head from "./head";
+import Footer from "./footer";
+interface Props {
+  title: string;
+  image: string;
+  alt: string;
+  url: string;
+}
+export default function RemoteWorking(props: Props) {
+  const { title, image, alt, url } = props;
+
+  return (
+    <>
+      <Head
+        title={title}
+        description={"Remote working funny video meme"}
+        image={image}
+        alt={alt}
+        url={url}
+      />
+
+      <h1>{title}</h1>
+
+      <Main />
+
+      <Footer />
+    </>
+  );
+}
+
+const Main = () => {
   return (
     <div>
       <div className="iframe-container">
         <iframe
           src="//fast.wistia.net/embed/iframe/n54m1lmixt?playerColor=bb6b29&amp;version=v1&amp;videoHeight=315&amp;videoWidth=560&amp;volumeControl=true"
-          allowFullScreen></iframe>
+          allowFullScreen
+        ></iframe>
       </div>
       <cite>
         Sponsored by &quot;REMOTE&quot;{" "}
@@ -19,7 +50,8 @@ export default function RemoteWorking() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-        }}>
+        }}
+      >
         <blockquote className="twitter-tweet">
           <p lang="en" dir="ltr">
             Coronavirus discount! I just got REMOTE WORK audiobook for free:
@@ -34,7 +66,8 @@ export default function RemoteWorking() {
         <script
           async
           src="https://platform.twitter.com/widgets.js"
-          charSet="utf-8"></script>
+          charSet="utf-8"
+        ></script>
       </div>
 
       <div className="cta">
@@ -50,9 +83,10 @@ export default function RemoteWorking() {
             marginHeight={0}
             scrolling="no"
             frameBorder={0}
-            src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=GB&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=louiechristie-21&language=en_GB&marketplace=amazon&region=GB&placement=0091954673&asins=0091954673&linkId=44f2c06c0b601a6db5b71ca04cbb8377&show_border=true&link_opens_in_new_window=false"></iframe>
+            src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=GB&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=louiechristie-21&language=en_GB&marketplace=amazon&region=GB&placement=0091954673&asins=0091954673&linkId=44f2c06c0b601a6db5b71ca04cbb8377&show_border=true&link_opens_in_new_window=false"
+          ></iframe>
         </p>
       </div>
     </div>
   );
-}
+};
