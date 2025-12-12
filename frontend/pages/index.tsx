@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { GetStaticProps } from "next";
 import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 
 import Head, { content } from "../components/head";
 import Footer from "../components/footer";
+import MemeListItem from "../components/memeListItem";
 
 import memes, { Meme, getLongTitle } from "../memes";
 
@@ -66,21 +66,7 @@ export default withErrorBoundary((props: Props) => {
 
         <ul className="memes-list">
           {memes.map((item) => (
-            <Link
-              key={item.url}
-              href={`${process.env.ASSET_PREFIX}/${item.url}/`}
-            >
-              <li className="box-shadow">
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  width={item.width}
-                  height={item.height}
-                  loading="lazy"
-                />
-                <h2>{getLongTitle(item)}</h2>
-              </li>
-            </Link>
+            <MemeListItem key={item.url} meme={item} />
           ))}
         </ul>
 
