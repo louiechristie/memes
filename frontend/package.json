@@ -13,8 +13,8 @@
     "clean": "npx rimraf .next"
   },
   "dependencies": {
-    "eslint-config-next": "^14.2.35",
-    "next": "^14.2.35",
+    "eslint-config-next": "15.5.9",
+    "next": "15.5.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-use-error-boundary": "^3.0.0"
