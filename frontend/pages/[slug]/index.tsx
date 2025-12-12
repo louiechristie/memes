@@ -7,51 +7,11 @@ import memes, { Meme, Item, getLongTitle, Footnote } from "../../memes";
 import Head from "../../components/head";
 import Footer from "../../components/footer";
 import MemeList from "../../components/memeList";
+import Box from "../../components/box";
 import TimeManagement from "../../components/time-management";
 import RemoteWorking from "../../components/remote-working";
 import BorisJohnsonsWorkExperience from "../../components/boris-johnsons-work-experience";
 
-interface BoxProps {
-  caption?: Meme["caption"];
-  cite?: Meme["cite"];
-}
-
-function Blockquote(props: { caption: Meme["caption"] }): JSX.Element {
-  const { caption } = props;
-  if (typeof caption === "string") {
-    return (
-      <blockquote>
-        <p>{caption}</p>
-      </blockquote>
-    );
-  } else if (
-    Array.isArray(caption) &&
-    caption.every((item) => typeof item === "string")
-  ) {
-    return (
-      <blockquote>
-        {caption.map((captionString) => {
-          return <p key={captionString}>{captionString}</p>;
-        })}
-      </blockquote>
-    );
-  } else {
-    return <p>Invalid caption type</p>;
-    console.error("Invalid caption type");
-  }
-}
-
-function Box(props: BoxProps): JSX.Element {
-  const { caption, cite } = props;
-  return caption ? (
-    <figcaption className="meme-fig-caption">
-      <Blockquote caption={caption}></Blockquote>
-      {cite && <cite> - {cite} </cite>}
-    </figcaption>
-  ) : (
-    <></>
-  );
-}
 interface AlsoSeeProps {
   alsoSee: Item[];
 }
