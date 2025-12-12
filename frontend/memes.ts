@@ -1,17 +1,10 @@
+import limit from "./utilities/limit";
+
 enum Descriptor {
   podcast,
 }
 
-export type Youtube = {
-  v: string;
-  start: number;
-  end: number;
-  list?: string;
-  index?: number;
-  descriptor?: Descriptor;
-};
-
-export type Meme = {
+type Core = {
   date?: string;
   url: string;
   title: string;
@@ -21,7 +14,6 @@ export type Meme = {
   height: number;
   caption?: string | string[];
   cite?: string;
-  youtube?: Youtube;
   customHTML?: boolean;
   bbc?: {
     link: string;
@@ -29,6 +21,17 @@ export type Meme = {
   alsoSee?: Item[];
   footnotes?: Footnote[];
   unlisted?: boolean;
+};
+
+export type Youtube = Core & {
+  youtube: {
+    v: string;
+    start: number;
+    end: number;
+    list?: string;
+    index?: number;
+    descriptor?: Descriptor;
+  };
 };
 
 export type Item = {
@@ -41,56 +44,23 @@ export type Footnote = {
   link?: string;
 };
 
-const limit = (string: string, length: number, end = "..."): string => {
-  return string.length <= length + 1
-    ? string
-    : `${string.substring(0, length)}${end}`;
-};
+export type Meme = Core | Youtube;
 
 export const getVideoDescriptor = (meme: Meme): string => {
-  const { title, bbc, youtube, customHTML } = meme;
+  const { title } = meme;
 
   let descriptor = `${title} [2 mins video]`;
 
-  if (youtube) {
-    const start = youtube.start;
-    const end = youtube.end;
-    const length = end - start;
-    const mins = Math.round(length / 60);
-    const sec = length % 60;
-    let denominator;
-    if (mins > 1) {
-      denominator = " mins";
-    } else if (mins > 0) {
-      denominator = " min";
-    } else {
-      denominator = " sec";
-    }
-
-    descriptor = `[${mins ? mins + denominator : sec + denominator} video]`;
-  }
   return descriptor;
 };
 
 export const getLongTitle = (meme: Meme) => {
-  const { title, bbc, youtube, customHTML } = meme;
-
-  const MAX_LENGTH_OF_OPENGRAPH_TITLE = 55; // https://www.contentkingapp.com/academy/open-graph/#:~:text=Keep%20your%20og%3Atitle%20under,file%20size%20under%208%20MB%20.
+  const { title, bbc } = meme;
 
   if (bbc) {
     return `${title} [2 mins video]`;
-  } else if (youtube) {
-    const maxLengthOfTitleWithoutDescriptor =
-      MAX_LENGTH_OF_OPENGRAPH_TITLE - getVideoDescriptor(meme).length;
-
-    return `${limit(
-      title,
-      maxLengthOfTitleWithoutDescriptor,
-      "..."
-    )} ${getVideoDescriptor(meme)}`;
-  } else {
-    return title;
   }
+  return title;
 };
 
 const memes: Meme[] = [

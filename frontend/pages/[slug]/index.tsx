@@ -2,11 +2,12 @@ import * as React from "react";
 import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
-import memes, { Meme, Item, getLongTitle, Footnote } from "../../memes";
+import memes, { Meme, getLongTitle, Footnote, Youtube } from "../../memes";
 
 import Head from "../../components/head";
 import Footer from "../../components/footer";
 import MemeList from "../../components/memeList";
+import YouTube from "../../components/youTube";
 import Box from "../../components/box";
 import AlsoSee from "../../components/alsoSee";
 import TimeManagement from "../../components/time-management";
@@ -42,7 +43,7 @@ const MemeDetail = withErrorBoundary(
       return <MemeList memes={memes} />;
     }
 
-    const { meme } = props;
+    let { meme } = props;
 
     const {
       url,
@@ -53,17 +54,21 @@ const MemeDetail = withErrorBoundary(
       alt,
       caption,
       cite,
-      youtube,
       customHTML,
       bbc,
       alsoSee,
       footnotes,
     } = meme;
 
+    let isYoutube = false;
+
+    if ("youtube" in meme) {
+      isYoutube = true;
+      meme = meme as Youtube;
+    }
+
     let longTitle = getLongTitle(meme);
     let description;
-
-    /* https://github.com/vercel/next.js/issues/19527 */
 
     if (customHTML && url === "boris-johnsons-work-experience")
       return (
@@ -83,6 +88,8 @@ const MemeDetail = withErrorBoundary(
         <TimeManagement title={longTitle} image={image} alt={alt} url={url} />
       );
 
+    if (isYoutube) return <YouTube meme={meme as Youtube} />;
+
     return (
       <>
         <Head
@@ -98,7 +105,7 @@ const MemeDetail = withErrorBoundary(
           <h1 className="meme-title">{getLongTitle(meme)}</h1>
 
           <div className="meme-inner">
-            {!youtube && !bbc && (
+            {!bbc && (
               <figure className="meme-fig">
                 <img
                   src={image}
@@ -112,20 +119,6 @@ const MemeDetail = withErrorBoundary(
                     <blockquote>{caption}</blockquote>
                   </figcaption>
                 )}
-              </figure>
-            )}
-
-            {youtube && (
-              <figure className="youtube">
-                <div className="iframe-container">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${youtube.v}?${youtube.list && `list=${youtube.list}`}${youtube.index && `&index=${youtube.index}`}&start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} // prettier-ignore
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-
-                <Box caption={caption} cite={cite} />
               </figure>
             )}
 
