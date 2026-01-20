@@ -1,9 +1,3 @@
-import limit from "./utilities/limit";
-
-enum Descriptor {
-  podcast,
-}
-
 type Core = {
   date?: string;
   url: string;
@@ -27,7 +21,6 @@ export type Youtube = Core & {
     end: number;
     list?: string;
     index?: number;
-    descriptor?: Descriptor;
   };
 };
 
