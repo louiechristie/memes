@@ -3,14 +3,13 @@ import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 
 import { Meme } from "../memes";
 
-type Props =
-  | Pick<Meme, "title" | "caption" | "image" | "url" | "alt"> & {
-      description: string | undefined;
-    };
+type Props = Pick<Meme, "title" | "caption" | "image" | "url" | "alt"> & {
+  description: string | undefined;
+};
 
-const h1 = "Meme";
+const h1 = "Shorts";
 const definitionOfMeme =
-  "... (Internet) Media, usually humorous, which is copied and circulated online with slight adaptations, such as basic pictures, video templates, etc.";
+  "Meme... (Internet) Media, usually humorous, which is copied and circulated online with slight adaptations, such as basic pictures, video templates, etc.";
 const originStory =
   "I wanted to send a friend a funny video clip on WhatsApp with a decent preview image. This website sort of spiralled from there.";
 
@@ -22,7 +21,7 @@ export { content };
 export default withErrorBoundary((props: Props) => {
   const [error, resetError] = useErrorBoundary(
     // You can optionally log the error to an error reporting service
-    (error, errorInfo) => console.log(error, errorInfo)
+    (error, errorInfo) => console.log(error, errorInfo),
   );
 
   if (error) {

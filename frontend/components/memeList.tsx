@@ -27,7 +27,7 @@ const MemeList = (props: Props) => {
 
   const [error, resetError] = useErrorBoundary(
     // You can optionally log the error to an error reporting service
-    (error, errorInfo) => console.log(error, errorInfo)
+    (error, errorInfo) => console.log(error, errorInfo),
   );
 
   if (error) {
@@ -66,12 +66,6 @@ const MemeList = (props: Props) => {
           </blockquote>
         </div>
 
-        <ul className="memes-list">
-          {memes.map((item) => (
-            <MemeListItem key={item.url} meme={item} />
-          ))}
-        </ul>
-
         <div className="site-description">
           <blockquote
             className="intro"
@@ -80,9 +74,22 @@ const MemeList = (props: Props) => {
             <p>
               <strong>Originally</strong>: &ldquo;{originStory}&rdquo;
             </p>
+            <p>
+              I don&apos;t really use{" "}
+              <a href="https://www.louiechristie.com/about/socials/">
+                social media
+              </a>{" "}
+              any more.
+            </p>
             <cite>- Louie Christie</cite>
           </blockquote>
         </div>
+
+        <ul className="memes-list">
+          {memes.map((item) => (
+            <MemeListItem key={item.url} meme={item} />
+          ))}
+        </ul>
       </div>
 
       <Footer />
