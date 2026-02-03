@@ -13,7 +13,13 @@ export default function TimeManagement(props: Props) {
 
   return (
     <>
-      <Head title={title} image={image} alt={alt} url={url} />
+      <Head
+        title={title}
+        image={image}
+        alt={alt}
+        url={url}
+        description={undefined}
+      />
 
       <h1>{title}</h1>
 
