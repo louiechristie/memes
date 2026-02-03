@@ -91,45 +91,45 @@ export default withErrorBoundary((props: Props) => {
 
       <header>
         <nav>
-          <h2 class="visually-hidden" id="top-level-navigation-menu">
+          <h2 className="visually-hidden" id="top-level-navigation-menu">
             Top level navigation menu
           </h2>
-          <ul class="nav">
-            <li class="nav-item ">
+          <ul className="nav">
+            <li className="nav-item ">
               <a href="/">Home</a>
             </li>
-            <li class="nav-item ">
+            <li className="nav-item ">
               <a href="/adventure/">Adventure</a>
             </li>
-            <li class="nav-item selected">
+            <li className="nav-item selected">
               <a href="/tech/" aria-current="page">
                 Tech
               </a>
             </li>
-            <li class="nav-item ">
+            <li className="nav-item ">
               <a href="https://comedy.louiechristie.com/">Comedy</a>
             </li>
           </ul>
 
-          <h2 class="visually-hidden" id="secondary-level-navigation-menu">
+          <h2 className="visually-hidden" id="secondary-level-navigation-menu">
             Secondary level navigation menu
           </h2>
 
-          <ul class="nav">
-            <li class="nav-item">
+          <ul className="nav">
+            <li className="nav-item">
               <a href="/tech/experiments/" aria-current="page">
                 Inventions
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a href="/tech/host/">Host</a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a href="https://www.louiechristie.com/intro-to-web-dev-course/">
                 Tutorials
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a href="/tech/offer/">Free Book</a>
             </li>
           </ul>
