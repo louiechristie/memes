@@ -44,6 +44,10 @@
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+.align-middle {
+  vertical-align: baseline;
+}
+
 body {
   /* For development / testing */
   /* max-height: 568px; */
@@ -55,6 +59,17 @@ body {
 
 header {
   padding-top: 8px;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .icon-link::before,
@@ -368,6 +383,10 @@ aside {
   list-style: none;
   padding-inline-start: 6px;
   line-height: 2.4em;
+}
+
+.icon-list li {
+  padding: 6px;
 }
 
 .icon-link {
