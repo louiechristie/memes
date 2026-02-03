@@ -6,6 +6,7 @@
     "name": "Louie Christie",
     "url": "https://www.louiechristie.com"
   },
+  "license": "UNLICENSED",
   "scripts": {
     "start": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build && touch out/.nojekyll && node scripts/generate-sitemap.mjs --experimental-strip-types",
