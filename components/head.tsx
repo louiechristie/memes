@@ -230,7 +230,7 @@ export default withErrorBoundary((props: Props) => {
                     style={{ width: "24px", height: "24px" }}
                     role="presentation"
                     alt="Icon of a calendar"
-                    src="/weeks-to-go/favicon.ico?v=58d47258503a?v=90abe0c9ee7e"
+                    src="https://www.louiechristie.com/weeks-to-go/favicon.ico"
                   ></img>
                 </a>
                 &nbsp;<a href="/weeks-to-go/">Weeks To Go</a>
@@ -240,7 +240,7 @@ export default withErrorBoundary((props: Props) => {
                   <img
                     loading="lazy"
                     decoding="async"
-                    src="/tech/experiments/nN3GMo7oTH-24.webp"
+                    src="https://www.louiechristie.com/tech/experiments/y54e4unxxl-24.avif"
                     className="icon-image align-text-bottom"
                     width="24"
                     height="24"
