@@ -16,7 +16,30 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${memes
   .filter((meme) => !meme.unlisted)
   .map((meme) => {
-    return `  <url>
+    if (meme.youtube) {
+      return `  
+  <video:video>
+    <video:thumbnail_loc>
+        ${meme.image}
+    </video:thumbnail_loc>
+    <video:title>
+        ${meme.title}
+    </video:title>
+    ${
+      meme.caption
+        ? `    <video:description>
+        ${meme.caption}
+    </video:description>`
+        : ""
+    }
+    <video:player_loc>
+        ${prefix}/${meme.url}
+    </video:player_loc>
+  </video:video>`;
+    }
+
+    return;
+    `  <url>
     <loc>${prefix}/${meme.url}/</loc>
   </url>`;
   })

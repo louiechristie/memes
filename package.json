@@ -9,11 +9,12 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "NODE_OPTIONS='--inspect' next dev",
-    "build": "next build && touch out/.nojekyll && node scripts/generate-sitemap.mjs --experimental-strip-types",
+    "build": "next build && touch out/.nojekyll && npm run generate-sitemap",
     "serve": "npx serve out",
     "lint": "tsc -p . && next lint",
     "deploy": "npm run build && rsync -avP ./out/ ~/Documents/louiechristie.com/_site/memes && cd ~/Documents/louiechristie.com/ && npm run deploy",
-    "clean": "npx rimraf .next"
+    "clean": "npx rimraf .next",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "eslint-config-next": "15.5.11",
