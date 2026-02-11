@@ -36,27 +36,25 @@ export type Footnote = {
 
 export type Meme = Core | Youtube;
 
-export const isYoutube = (meme: Meme) => {
+export const getIsYoutube = (meme: Meme) => {
   let isYoutube = false;
   if ("youtube" in meme) {
     isYoutube = true;
-    meme = meme as Youtube;
   }
   return isYoutube;
 };
 
-export const getVideoDescriptor = (meme: Meme): string => {
-  const { title } = meme;
-
-  let descriptor = `${title} [2 mins video]`;
-
-  return descriptor;
+export const getYoutube = (meme: Meme) => {
+  if (getIsYoutube(meme)) {
+    return meme as Youtube;
+  }
+  return undefined;
 };
 
 const memes: Meme[] = [
   {
     url: "purpose-not-pressure",
-    title: "Purpose Not Pressure (tech)",
+    title: "Purpose Not Pressure [tech]",
     image: "http://img.youtube.com/vi/Saaz6D1azlU/0.jpg",
     width: 1280,
     height: 720,
@@ -222,7 +220,7 @@ const memes: Meme[] = [
   },
   {
     url: "debugging-the-right-way",
-    title: "Debugging The Right Way (tech)",
+    title: "Debugging The Right Way [tech]",
     image: "http://img.youtube.com/vi/PUv66718DII/0.jpg",
     width: 1280,
     height: 720,
@@ -243,7 +241,7 @@ const memes: Meme[] = [
   },
   {
     url: "redux-was-actually-about-time-travel",
-    title: "Redux was actually about time travel (tech)",
+    title: "Redux was actually about time travel [tech]",
     image: "http://img.youtube.com/vi/8pDqJVdNa44/0.jpg",
     width: 1280,
     height: 720,
@@ -356,7 +354,7 @@ const memes: Meme[] = [
   // },
   {
     url: "react-or-angular",
-    title: "React or Angular (tech)",
+    title: "React or Angular [tech]",
     image: "https://img.youtube.com/vi/HGf89S1N930/maxresdefault.jpg",
     width: 1280,
     height: 720,
@@ -376,7 +374,7 @@ const memes: Meme[] = [
   },
   {
     url: "should-i-use-redux",
-    title: "Should I use Redux? (tech)",
+    title: "Should I use Redux? [tech]",
     image: "https://img.youtube.com/vi/XEt09iK8IXs/hq2.jpg",
     width: 1280,
     height: 720,
@@ -444,7 +442,7 @@ const memes: Meme[] = [
   },
   {
     url: "nanoseconds",
-    title: "Nanoseconds (tech)",
+    title: "Nanoseconds [tech]",
     image: "https://img.youtube.com/vi/oE2uls6iIEU/0.jpg",
     width: 480,
     height: 360,

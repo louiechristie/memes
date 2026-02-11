@@ -2,7 +2,7 @@ import * as React from "react";
 import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
-import memes, { Meme, Footnote, Youtube, isYoutube } from "../../memes";
+import memes, { Meme, Footnote, Youtube, getIsYoutube } from "../../memes";
 
 import Head from "../../components/head";
 import Footer from "../../components/footer";
@@ -26,8 +26,8 @@ const MemeDetail = withErrorBoundary(
           "MemeDetail Error: ",
           error,
           "MemeDetail error Info: ",
-          errorInfo
-        )
+          errorInfo,
+        ),
     );
 
     if (error) {
@@ -78,7 +78,7 @@ const MemeDetail = withErrorBoundary(
     if (customHTML && url === "time-management")
       return <TimeManagement title={title} image={image} alt={alt} url={url} />;
 
-    if (isYoutube(meme)) return <YouTube meme={meme as Youtube} />;
+    if (getIsYoutube(meme)) return <YouTube meme={meme as Youtube} />;
 
     return (
       <>
@@ -119,7 +119,7 @@ const MemeDetail = withErrorBoundary(
         <Footer />
       </>
     );
-  }
+  },
 );
 
 export default MemeDetail;

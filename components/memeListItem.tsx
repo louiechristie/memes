@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 
-import { Meme, isYoutube, getVideoDescriptor } from "../memes";
+import { Meme, getIsYoutube, getYoutube } from "../memes";
+
+import { getVideoDescriptor } from "./youTube";
 
 interface Props {
   meme: Meme;
@@ -12,8 +14,13 @@ const MemeListItem = withErrorBoundary((props: Props) => {
 
   const [error, resetError] = useErrorBoundary(
     // You can optionally log the error to an error reporting service
-    (error, errorInfo) => console.log(error, errorInfo)
+    (error, errorInfo) => console.log(error, errorInfo),
   );
+
+  const isYoutube = getIsYoutube(meme);
+
+  const YouTube = isYoutube && getYoutube(meme);
+  const videoDescriptor = YouTube && getVideoDescriptor(YouTube);
 
   if (error) {
     return (
@@ -35,8 +42,9 @@ const MemeListItem = withErrorBoundary((props: Props) => {
             height={meme.height}
             loading="lazy"
           />
-          {isYoutube(meme) && <h2>{getVideoDescriptor(meme)}</h2>}
-          {!isYoutube(meme) && <h2>{meme.title}</h2>}
+          <h2>
+            {meme.title} {isYoutube && videoDescriptor}
+          </h2>
         </li>
       </Link>
     </div>
