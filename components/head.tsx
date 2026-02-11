@@ -158,7 +158,7 @@ export default withErrorBoundary((props: Props) => {
                 </a>
               </span>
               <a href="/memes/" aria-current="page">
-                Memes
+                Shorts
               </a>
             </li>
             <li className="icon-link">
