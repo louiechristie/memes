@@ -185,9 +185,7 @@ const memes: Meme[] = [
     image: "http://img.youtube.com/vi/tvJEE2ryCRQ/2.jpg",
     width: 1280,
     height: 720,
-    alt: "Stand up comedy club in virtual reality in a dark lounge with wooden walls",
-    caption:
-      "Woman holding a microphone, on a stage in front of an audience. She looks like a British woman on a Friday night out, only she's in a massive TV studio.",
+    alt: "Woman holding a microphone, on a stage in front of an audience. She looks like a British woman on a Friday night out, only she's in a massive TV studio.",
     youtube: {
       v: "tvJEE2ryCRQ",
       start: 1 * 60 + 49,
