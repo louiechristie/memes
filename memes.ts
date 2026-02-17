@@ -53,6 +53,22 @@ export const getYoutube = (meme: Meme) => {
 
 const memes: Meme[] = [
   {
+    url: "its-pancake-day-2026",
+    title: "It's Pancake Day 2026",
+    image:
+      "https://www.louiechristie.com/memes/images/its-pancake-day-2026.png",
+    width: 482,
+    height: 978,
+    alt: "Today - Pancake Day 🥞. Tomorrow, take raincoat and freezing. Weather 'Winton' forecast South London.",
+    caption: "17 February 2026",
+    footnotes: [
+      {
+        text: "Friendly Weather Forecast ",
+        link: "https://weather.louiechristie.com/",
+      },
+    ],
+  },
+  {
     url: "lander-23",
     title: "Lander 23",
     image: "http://img.youtube.com/vi/ElMy8ThzHaU/0.jpg",
