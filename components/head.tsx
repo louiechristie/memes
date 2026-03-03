@@ -3,7 +3,10 @@ import { withErrorBoundary, useErrorBoundary } from "react-use-error-boundary";
 
 import { Meme } from "../memes";
 
-type Props = Pick<Meme, "title" | "caption" | "image" | "url" | "alt"> & {
+type Props = Pick<
+  Meme,
+  "title" | "caption" | "image" | "url" | "alt" | "width" | "height"
+> & {
   description: string | undefined;
 };
 
@@ -41,7 +44,7 @@ export default withErrorBoundary((props: Props) => {
     );
   }
 
-  const { title, description, image, url, alt, caption } = props;
+  const { title, description, image, url, alt, caption, width, height } = props;
 
   const siteUrl = "https://www.louiechristie.com/memes/";
   let pageDescription = "";
@@ -63,17 +66,16 @@ export default withErrorBoundary((props: Props) => {
     <div>
       <Head>
         <title>{title}</title>
-
         <meta property="og:title" content={title} />
         <meta name="description" content={pageDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={image} />
-        <meta property="og:url" content={`${siteUrl}${url}`} />
+        <meta property="og:image:width" content={`${width}`} />
+        <meta property="og:image:height" content={`${height}`} />
+        <meta property="og:url" content={`${siteUrl}${url}/`} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:image:alt" content={alt} />
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <meta name="monetization" content="$ilp.gatehub.net/484331722" />
       </Head>
 

@@ -45,13 +45,25 @@ export const getLongTitle = (meme: Youtube) => {
   return `${limit(
     title,
     maxLengthOfTitleWithoutDescriptor,
-    "..."
+    "...",
   )} ${getVideoDescriptor(meme)}`;
 };
 
 const YouTube = (props: Props) => {
   const { meme } = props;
-  const { caption, image, alt, url, cite, alsoSee, footnotes, youtube } = meme;
+
+  const {
+    caption,
+    image,
+    alt,
+    url,
+    cite,
+    alsoSee,
+    footnotes,
+    youtube,
+    width,
+    height,
+  } = meme;
 
   return (
     <>
@@ -62,6 +74,8 @@ const YouTube = (props: Props) => {
         image={image}
         alt={alt}
         url={url}
+        width={width}
+        height={height}
       />
 
       <div className="meme-container">

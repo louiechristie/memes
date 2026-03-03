@@ -60,10 +60,13 @@ interface Props {
   title: string;
   mainImage: string;
   slug: string;
+  width: number;
+  height: number;
+  alt: string;
 }
 
 export default function BorisJohnsonsWorkExperience(props: Props) {
-  const { title, mainImage, slug } = props;
+  const { title, mainImage, slug, width, height, alt } = props;
   return (
     <div>
       <Head
@@ -73,8 +76,9 @@ export default function BorisJohnsonsWorkExperience(props: Props) {
         }
         image={mainImage}
         url={slug}
-        alt=""
-        caption=""
+        alt={alt}
+        width={width}
+        height={height}
       />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: 960 }}>

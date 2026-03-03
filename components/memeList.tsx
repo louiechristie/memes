@@ -53,8 +53,10 @@ const MemeList = (props: Props) => {
           memes.find((item) => item.url === "valuable-lesson")?.alt ||
           "louiechristie.com icon, L C initials handwritten"
         }
-        url={""}
-        description={Object.values(content).join(" ")}
+        url={"memes/"}
+        width={memes[memes.length - 1]?.width || 1200}
+        height={memes[memes.length - 1]?.height || 630}
+        description="A collection of memes created by Louie Christie."
       />
 
       <div className="memes-container">

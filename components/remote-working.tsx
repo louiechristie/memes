@@ -1,13 +1,9 @@
 import Head from "./head";
 import Footer from "./footer";
-interface Props {
-  title: string;
-  image: string;
-  alt: string;
-  url: string;
-}
-export default function RemoteWorking(props: Props) {
-  const { title, image, alt, url } = props;
+import { Meme } from "../memes";
+
+export default function RemoteWorking(props: Meme) {
+  const { title, image, alt, url, width, height } = props;
 
   return (
     <>
@@ -17,6 +13,8 @@ export default function RemoteWorking(props: Props) {
         image={image}
         alt={alt}
         url={url}
+        width={width}
+        height={height}
       />
 
       <h1>{title}</h1>

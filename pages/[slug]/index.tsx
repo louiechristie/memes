@@ -70,13 +70,34 @@ const MemeDetail = withErrorBoundary(
           title={title}
           mainImage={image}
           slug={url}
+          width={width}
+          height={height}
+          alt={alt}
         />
       );
 
     if (customHTML && url === "remote-working")
-      return <RemoteWorking title={title} image={image} alt={alt} url={url} />;
+      return (
+        <RemoteWorking
+          title={title}
+          image={image}
+          alt={alt}
+          url={url}
+          width={width}
+          height={height}
+        />
+      );
     if (customHTML && url === "time-management")
-      return <TimeManagement title={title} image={image} alt={alt} url={url} />;
+      return (
+        <TimeManagement
+          title={title}
+          image={image}
+          alt={alt}
+          url={url}
+          width={width}
+          height={height}
+        />
+      );
 
     if (getIsYoutube(meme)) return <YouTube meme={meme as Youtube} />;
 
@@ -89,6 +110,8 @@ const MemeDetail = withErrorBoundary(
           image={image}
           alt={alt}
           url={url}
+          width={width}
+          height={height}
         />
 
         <div className="meme-container">
